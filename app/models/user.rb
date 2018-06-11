@@ -321,6 +321,8 @@ class User < ActiveRecord::Base
   def self.find_for_database_authentication(warden_conditions)
     conditions = warden_conditions.dup
     login = conditions.delete(:login)
+    #TODO: modificado para pruebas
+    where(conditions.to_hash).where(["document_number = ?",login]).first ||
     where(conditions.to_hash).where(["lower(email) = ?", login.downcase]).first ||
     where(conditions.to_hash).where(["username = ?", login]).first
   end
