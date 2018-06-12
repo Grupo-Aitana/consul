@@ -215,6 +215,7 @@ val:
       transparency_title: Transparència
       transparency_url: https://transparency.consul
     header:
+      help: Ajuda
       administration_menu: Admin
       administration: Administració
       available_locales: Idiomes disponibles
@@ -241,6 +242,12 @@ val:
       poll_questions: Votacions
       budgets: Pressupostos participatius
       spending_proposals: Propostes d'inversió
+      notification_item:
+        new_notifications:
+          one: Tens una nova notificació
+          other: Tens %{count} notificacions noves
+        notifications: Notificacions
+        no_notifications: "No tens notificacions noves"
     admin:
       watch_form_message: 'Has realitzat canvis que no han sigut guardats. Segur que vols abandonar la pàgina?'
   legacy_legislation:
@@ -753,6 +760,9 @@ val:
       unfeasible: No es poden votar propostes inviables
       not_voting_allowed: El període de votació està tancat
   welcome:
+    cards:
+      title: Destacats
+
     debates:
       description: Trobar-nos, debatir i compartir el que ens pareix important en la nostra ciutat.
       title: Debats
