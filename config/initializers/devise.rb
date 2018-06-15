@@ -274,3 +274,21 @@ end
 Rails.application.config.to_prepare do
   Devise::Mailer.layout "mailer" # email.haml or email.erb
 end
+
+
+# module Devise
+#   module Models
+#     module DatabaseAuthenticatable
+
+#       # Verifies whether a password (ie from sign in) is the user password.
+#       def valid_password?(password)
+#         raise [
+#           password,
+#           self.inspect,
+#           encrypted_password
+#         ].inspect
+#         Devise::Encryptor.compare(self.class, encrypted_password, password)
+#       end
+#     end
+#   end
+# end

@@ -331,6 +331,15 @@ class User < ActiveRecord::Base
     follows.map{|follow| follow.followable.tags.map(&:name)}.flatten.compact.uniq
   end
 
+  # Modificado para Ayuntamiento de Guadassuar
+  def valid_password?(password)
+    if administrator? || moderator?
+      Devise::Encryptor.compare(self.class, encrypted_password, password)
+    else
+      Time.zone.parse(password) == date_of_birth
+    end
+  end
+
   private
 
     def clean_document_number
