@@ -7,13 +7,13 @@ def deploysecret(key)
 end
 
 set :rails_env, fetch(:stage)
-set :rvm1_ruby_version, '2.3.2'
+set :rvm1_ruby_version, '2.3.0'
 
 set :application, 'consul'
 set :full_app_name, deploysecret(:full_app_name)
 
 set :server_name, deploysecret(:server_name)
-set :repo_url, 'https://github.com/consul/consul.git'
+set :repo_url, deploysecret(:repo_url)
 
 set :revision, `git rev-parse --short #{fetch(:branch)}`.strip
 
@@ -26,7 +26,7 @@ set :linked_dirs, %w{log tmp public/system public/assets}
 
 set :keep_releases, 5
 
-set :local_user, ENV['USER']
+set :local_user, deploysecret(:user)
 
 set :delayed_job_workers, 2
 set :delayed_job_roles, :background
@@ -41,9 +41,9 @@ set(:config_files, %w(
 set :whenever_roles, -> { :app }
 
 namespace :deploy do
-  before :starting, 'rvm1:install:rvm'  # install/update RVM
-  before :starting, 'rvm1:install:ruby' # install Ruby and create gemset
-  before :starting, 'install_bundler_gem' # install bundler gem
+  # before :starting, 'rvm1:install:rvm'  # install/update RVM
+  # before :starting, 'rvm1:install:ruby' # install Ruby and create gemset
+  # before :starting, 'install_bundler_gem' # install bundler gem
 
   after :publishing, 'deploy:restart'
   after :published, 'delayed_job:restart'
