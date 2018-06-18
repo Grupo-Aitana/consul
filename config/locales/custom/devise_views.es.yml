@@ -68,7 +68,7 @@ es:
     sessions:
       new:
         login_label: DNI
-        password_label: Contraseña que utilizarás para acceder a este sitio web
+        password_label: Fecha de nacimiento
         remember_me: Recordarme
         submit: Entrar
         title: Iniciar sesión

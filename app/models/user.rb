@@ -2,10 +2,12 @@ class User < ActiveRecord::Base
 
   include Verification
 
-  devise :database_authenticatable, :registerable, :confirmable, :recoverable, :rememberable,
+  devise :database_authenticatable, :rememberable,
          :trackable, :validatable, :omniauthable, :async, :password_expirable, :secure_validatable,
          authentication_keys: [:login]
 
+
+        #  :registerable, :confirmable, :recoverable,
   acts_as_voter
   acts_as_paranoid column: :hidden_at
   include ActsAsParanoidAliases
