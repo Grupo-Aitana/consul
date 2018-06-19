@@ -13,6 +13,8 @@ module Abilities
       can :stats, Poll do |poll|
         poll.expired? && poll.stats_enabled?
       end
+
+      cannot :create, Proposal
       can :read, Poll::Question
       can [:read, :welcome], Budget
       can :read, SpendingProposal
