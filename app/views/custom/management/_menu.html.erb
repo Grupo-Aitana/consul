@@ -26,9 +26,14 @@
       </ul>
     </li>
 
-    <li class="section-title">
-      Votacions
+    <li <%= "class=is-active" if controller_name == "polls" && action_name == "new" %>>
 
+    </li>
+    <li <%= "class=is-active" if controller_name == "polls" && action_name == "index" %>>
+      <%= link_to management_polls_path do %>
+        <span class="icon-checkmark-circle"></span>
+        <%= t("admin.menu.title_polls") %>
+      <% end %>
     </li>
 
     <li <%= "class=is-active" if controller_name == "proposals" && action_name == "new" %>>
