@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 
   include Verification
 
-  devise :database_authenticatable, :rememberable,
+  devise :database_authenticatable, :rememberable, :registerable, :confirmable, :recoverable,
          :trackable, :validatable, :omniauthable, :async, :password_expirable, :secure_validatable,
          authentication_keys: [:login]
 
@@ -338,7 +338,11 @@ class User < ActiveRecord::Base
     if administrator? || moderator?
       Devise::Encryptor.compare(self.class, encrypted_password, password)
     else
-      Time.zone.parse(password) == date_of_birth
+      puts password.inspect
+      puts date_of_birth.inspect
+      a = Time.zone.parse(password)
+      puts a.inspect
+      a == date_of_birth
     end
   end
 
