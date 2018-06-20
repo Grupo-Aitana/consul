@@ -8,14 +8,13 @@
   <div class="row margin">
     <div class="small-12 medium-9 column">
       <%= render "callout" %>
-
-      <% if @poll.voted_in_booth?(current_user) %>
+      <% if @poll.voted_in_booth?(managed_user) %>
         <div class="callout warning">
           <%= t("polls.show.already_voted_in_booth") %>
         </div>
       <% else %>
 
-        <% if current_user && @poll.voted_in_web?(current_user) && !@poll.expired? %>
+        <% if managed_user && @poll.voted_in_web?(managed_user) && !@poll.expired? %>
           <div class="callout warning">
             <%= t("polls.show.already_voted_in_web") %>
           </div>
@@ -26,13 +25,13 @@
         <%= render 'polls/questions/question', question: question, token: @token %>
       <% end %>
 
-      <% if poll_voter_token(@poll, current_user).empty? %>
+      <% if poll_voter_token(@poll, managed_user).empty? %>
         <div class="callout token-message js-token-message" style="display: none">
           <%= t('poll_questions.show.voted_token') %>
         </div>
       <% end %>
 
-      <%= link_to t("polls.show.participate_in_other_polls"), polls_path, class: "button hollow" %>
+      <%#= link_to t("polls.show.participate_in_other_polls"), polls_path, class: "button hollow" %>
     </div>
   </div>
 

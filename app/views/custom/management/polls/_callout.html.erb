@@ -1,11 +1,11 @@
 <% unless can?(:answer, @poll) %>
-  <% if current_user.nil? %>
+  <% if managed_user.nil? %>
     <div class="callout primary">
       <%= t("polls.show.cant_answer_not_logged_in",
             signin: link_to(t("polls.show.signin"), new_user_session_path, class: "probe-message"),
             signup: link_to(t("polls.show.signup"), new_user_registration_path, class: "probe-message")).html_safe %>
     </div>
-  <% elsif current_user.unverified? %>
+  <% elsif managed_user.unverified? %>
     <div class="callout warning">
       <%= t('polls.show.cant_answer_verify_html',
             verify_link: link_to(t('polls.show.verify_link'), verification_path)) %>
