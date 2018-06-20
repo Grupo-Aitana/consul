@@ -1,7 +1,7 @@
 <div class="expanded no-margin-top polls-show-header">
   <div class="row">
     <div class="small-12 medium-9 column padding">
-      <%= back_link_to polls_path, t("polls.show.back") %>
+      <%= back_link_to management_polls_path, t("polls.show.back") %>
 
       <h2><%= @poll.name %></h2>
 
@@ -16,13 +16,7 @@
       <% end %>
     </div>
 
-    <aside class="small-12 medium-3 column margin-top">
-      <%= render partial: 'shared/social_share', locals: {
-        share_title: t("shared.share"),
-        title: @poll.name,
-        url: poll_url(@poll),
-        description: @poll.name
-      } %>
+
     </aside>
   </div>
 </div>

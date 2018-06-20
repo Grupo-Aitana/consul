@@ -43,7 +43,7 @@
         <%= safe_html_with_links simple_format(@poll.description) %>
       </div>
 
-      <% if false %>
+      <% if true %>
         <aside class="small-12 medium-3 column">
           <div class="sidebar-divider"></div>
           <h2><%= t("polls.show.documents") %></h2>
@@ -54,6 +54,7 @@
 
   <div class="expanded poll-more-info-answers">
     <div class="row padding">
+    <%= debug @poll_questions_answers.inspect %>
 
       <% @poll_questions_answers.each do |answer| %>
         <div class="small-12 medium-6 column end answer <%= cycle('first', '') %>" id="answer_<%= answer.id %>">
