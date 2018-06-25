@@ -1,0 +1,4 @@
+es:
+  admin:
+      search:
+        email_placeholder: Buscar usuario por DNI

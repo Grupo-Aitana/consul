@@ -1,0 +1,5 @@
+val:
+  admin:
+    poll_officers:
+      search:
+        email_placeholder: Cercar usuari per DNI

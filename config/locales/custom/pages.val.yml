@@ -30,10 +30,11 @@ val:
         title: "Debats"
         description: "En la secció de %{link} pots exposar i compartir la teua opinió amb altres persones sobre temes que et preocupen relacionats amb la ciutat. També és un espai on generar idees que a través de les altres seccions de %{org} porten a actuacions concretes per part de l'Ajuntament."
         link: "debats ciutadans"
-        feature_html: "Pots obrir debats, comentar-los i valorar-los amb els botons <strong>d'estic d'acord</strong> o <strong>No estic d'acord</strong>. Per a això que %{link}."
-        feature_link: "registrar-te en%{org}"
+        feature_html: "Pots obrir debats, comentar-los i valorar-los amb els botons de <strong>Estic d'acord</strong> o <strong>No estic d'acord</strong>. Per a això tens que %{link}."
+        feature_link: "egistrar-te en %{org}"
         image_alt: "Botons per a valorar els debats"
-        figcaption: 'Botons "Estoy d'acuerdo" i "No estic d'acuerdo" per a valorar els debats.'
+        figcaption: Botons "Estic d'acord" i "No estic d'acord" per a valorar els debats.
+
       proposals:
         title: "Propostes"
         description: "En la secció de %{link} pots plantejar propostes perquè l'Ajuntament les duga a terme. Les propostes demanen suports, i si aconseguixen els suports suficients se sotmeten a votació ciutadana. Les propostes aprovades en estes votacions ciutadanes són assumides per l'Ajuntament i es duen a terme."

@@ -524,7 +524,7 @@ val:
         email: Correu electrònic
         entry_name: president de taula
       search:
-        email_placeholder: Cercar usuari per correu electrònic
+        email_placeholder: Cercar usuari per aaaaaa correu electrònic
         search: Cercar
         user_not_found: Usuari no trobat
     poll_officer_assignments:
