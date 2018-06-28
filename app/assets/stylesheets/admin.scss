@@ -58,6 +58,41 @@ $sidebar-active: #f4fcd0;
       box-shadow: 0 2px 2px #eee;
     }
 
+    @include breakpoint(small only) {
+
+      .top-bar-left ul {
+        display: inline-block;
+      }
+
+      .top-bar-right {
+
+        .submenu {
+          border: 0;
+          display: block;
+          margin-top: 0;
+          position: initial;
+          width: 100%;
+        }
+
+        .is-active {
+          font-weight: normal;
+          text-decoration: none;
+        }
+
+        .is-submenu-item {
+          padding: $line-height / 2 0;
+        }
+
+        a {
+          font-weight: normal !important;
+        }
+      }
+
+      [class^="icon-"] {
+        display: none;
+      }
+    }
+
     [class^="icon-"]:not(.icon-circle) {
       font-size: $base-font-size;
     }
@@ -244,6 +279,7 @@ $sidebar-active: #f4fcd0;
 }
 
 .admin-content {
+  overflow: scroll;
   padding: $line-height !important;
 }
 
@@ -708,15 +744,6 @@ table {
 .legislation-question-delete {
   @include breakpoint(medium) {
     text-align: right;
-  }
-}
-
-.legislation-process-index {
-
-  .legislation-process-new {
-    @include breakpoint(medium) {
-      text-align: right;
-    }
   }
 }
 

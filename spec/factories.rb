@@ -404,8 +404,14 @@ FactoryBot.define do
     reason "unfeasible"
   end
 
+  factory :budget_investment_status, class: 'Budget::Investment::Status' do
+    sequence(:name)        { |n| "Budget investment status #{n} name" }
+    sequence(:description) { |n| "Budget investment status #{n} description" }
+  end
+
   factory :budget_investment_milestone, class: 'Budget::Investment::Milestone' do
     association :investment, factory: :budget_investment
+    association :status, factory: :budget_investment_status
     sequence(:title)     { |n| "Budget investment milestone #{n} title" }
     description          'Milestone description'
     publication_date     Date.current

@@ -15,14 +15,11 @@
         <small class="show-for-small-only">
           <%= t('layouts.header.notification_item.new_notifications',
               count: current_user.notifications_count).html_safe %>
-        </small>
+        </span>
       <% else %>
         <span class="icon-no-notification" aria-hidden="true"
               title="<%= t('layouts.header.notification_item.no_notifications') %>">
         </span>
-        <small class="show-for-small-only">
-          <%= t('layouts.header.notification_item.no_notifications') %>
-        </small>
       <% end %>
 
     <% end %>
