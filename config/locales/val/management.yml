@@ -1,10 +1,25 @@
 val:
   management:
     account:
+      menu:
+        reset_password_email: Restablir contrasenya via email
+        reset_password_manually: Restablir contrasenya manualment
       alert:
         unverified_user: Sols es poden editar comptes d'usuaris verificats
       show:
         title: Compte d'usuari
+      edit:
+        title: 'Editar compte d''usuari: Restablir contrasenya'
+        back: Arrere
+        password:
+          password: Contrasenya
+          send_email: Enviar email per a restablir contrasenya
+          reset_email_send: Email enviat correctament.
+          reseted: Contrasenya restablida correctament
+          random: Generar contrasenya aleatoria
+          save: Guardar
+          print: Imprimir contrasenya
+          print_help: Podràs imprimir la contrasenya quant s'haja guardat.
     account_info:
       change_user: Canviar usuari
       document_number_label: 'Número de document:'

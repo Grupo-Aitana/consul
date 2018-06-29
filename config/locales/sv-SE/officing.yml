@@ -1,0 +1,66 @@
+sv:
+  officing:
+    header:
+      title: Omröstning
+    dashboard:
+      index:
+        title: Omröstningskontor
+        info: Här kan du granska användardokumentation och spara resultat från omröstningar
+    menu:
+      voters: Granska dokument
+      total_recounts: Resultat av omröstning
+    polls:
+      final:
+        title: Avslutade omröstningar
+        no_polls: Du har inga omröstningar för granskning
+        select_poll: Välj omröstning
+        add_results: Lägg till resultat
+    results:
+      flash:
+        create: "Resultaten har sparats"
+        error_create: "Resultaten har INTE sparats. Felaktig data."
+        error_wrong_booth: "Fel röstbås. Resultatet sparades INTE."
+      new:
+        title: "%{poll} - Lägg till resultat"
+        not_allowed: "Du får lägga till resultat för denna omröstning"
+        booth: "Röstbås"
+        date: "Datum"
+        select_booth: "Välj röstbås"
+        ballots_white: "Blankröster"
+        ballots_null: "Ogiltiga röster"
+        ballots_total: "Totalt antal röster"
+        submit: "Spara"
+        results_list: "Dina resultat"
+        see_results: "Se resultat"
+      index:
+        no_results: "Inga resultat"
+        results: Resultat
+        table_answer: Svar
+        table_votes: Röster
+        table_whites: "Blankröster"
+        table_nulls: "Ogiltiga röster"
+        table_total: "Totalt antal röster"
+    residence:
+      flash:
+        create: "Bekräftat dokument"
+        not_allowed: "Du har inga skift idag"
+      new:
+        title: Godkänn dokument
+        document_number: "Dokumentnummer (inklusive bokstäver)"
+        submit: Godkänn dokument
+        error_verifying_census: "Ditt dokument kunde inte verifieras mot folkbokföringen."
+        form_errors: förhindrade godkännandet av det här dokumentet
+        no_assignments: "Du har inga skift idag"
+    voters:
+      new:
+        title: Omröstningar
+        table_poll: Omröstning
+        table_status: Omröstningsstatus
+        table_actions: Åtgärder
+      show:
+        can_vote: Kan rösta
+        error_already_voted: Du har redan deltagit i den här omröstningen
+        submit: Bekräfta röst
+        success: "Du har röstat!"
+      can_vote:
+        submit_disable_with: "Vänta, din röst bekräftas..."

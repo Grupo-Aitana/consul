@@ -231,16 +231,21 @@ val:
       moderation: Moderació
       valuation: Avaluació
       officing: Presidents de taula
+      help: Ajuda
       my_account_link: El meu compte
       my_activity_link: La meua activitat
       open: obert
-      open_city_slogan_html: Existeixen ciutats gobernades directament per els seus habitants, que <strong>debateixen</strong> sobre temes que els preocupen, <strong>proposen</strong> idees per a millorar les seues vides i <strong>decideixen</strong> entre totes i tots les que es duen a terme.
-      open_city_title: La ciutat que vols serà la ciutat que voldras
       open_gov: Govern %{open}
       proposals: Propostes
       poll_questions: Votacions
       budgets: Pressupostos participatius
       spending_proposals: Propostes d'inversió
+      notification_item:
+        new_notifications:
+          one: Tens una nova notificació
+          other: Tens %{count} noves notificacions
+        notifications: Notificacions
+        no_notifications: "No tens noves notificacions"
     admin:
       watch_form_message: 'Has realitzat canvis que no han sigut guardats. Segur que vols abandonar la pàgina?'
   legacy_legislation:
@@ -255,7 +260,23 @@ val:
     index:
       empty_notifications: No tens noves notificacions.
       mark_all_as_read: Marcar totes como llegides
+      read: Llegides
       title: Notificacions
+      unread: Noves
+    notification:
+      action:
+        comments_on:
+          one: Hi ha un nou comentari en
+          other: Hi ha %{count} comentaris nous en
+        proposal_notification:
+          one: Hi ha una nova notificació en
+          other: Hi ha %{count} noves notificacions en
+        replies_to:
+          one: Hi ha una resposta nova al teu comentari en
+          other: Hi ha %{count} respostes noves al teu comentari en
+      mark_as_read: Marcar com llegides
+      mark_as_unread: Marcar com no llegides
+      notifiable_hidden: Aquest recurs no esta disponible.
   map:
     title: "Districtes"
     proposal_for_district: "Crea una proposta per al teu districte"
@@ -464,6 +485,7 @@ val:
         description: Registra't per poder votar propostes ciutadanes i les qüestions que pregunta als veïns l'Ajuntament. Pren decisions municipals de forma directa.
         help_text_1: "Les votacions es convoquen quant una proposta ciutadana arriba a l'1% d'avals del cens amb dret a vot. En les votacions també es poden incloure qüestions que l'Ajuntament sotmet a decisió directa de la ciutadania."
         help_text_2: "Per participar en la pròxima votació has de regitstrar-te en %{org} i verificar el teu compte. Poden votar totes les persones empadronades en la ciutat majors de 16 anys. Els resultats de totes les votacions seran vinculants per al govern."
+      no_polls: "No hi ha votacions obertes."
     show:
       already_voted_in_booth: "Ya has participat en esta votació en urnes presencials, no pots tornar a participar."
       already_voted_in_web: "Ya has participat en esta votació. Si tornes a votar es sobreescriurà el teu vot anterior."
@@ -606,6 +628,10 @@ val:
       previous_slide: Imatge anterior
       next_slide: Imatge següent
     documentation: Documentació adicional
+    view_mode:
+      title: Mode de vista
+      cards: Targetes
+      list: Lista
   social:
     blog: "Blog de %{org}"
     facebook: "Facebook de %{org}"
@@ -723,6 +749,7 @@ val:
       no_private_messages: "Este usuari no accepta missatges privats."
       private_activity: Este usuari ha decidit mantindre en privat la seua llista d'activitats.
       send_private_message: "Enviar un missatge privat"
+      delete_alert: "Segur que desitges eliminar aquesta proposta? Aquesta acció no es pot desfer"
     proposals:
       send_notification: "Enviar notificació"
       retire: "Retirar"
@@ -752,21 +779,25 @@ val:
       organization: Les organitzacions no poden votar
       unfeasible: No es poden votar propostes inviables
       not_voting_allowed: El període de votació està tancat
+      different_heading_assigned:
+        one: "Sols pots avalar projectes de %{count} districte"
+        other: "Sols pots avalar projectes de %{count} districtes"
   welcome:
-    debates:
-      description: Trobar-nos, debatir i compartir el que ens pareix important en la nostra ciutat.
-      title: Debats
-    decide:
-      description: La ciutadania decideix si accepta o rebutja les propostes més avalades.
-      title: Decideix
-    do:
-      description: Si la proposta es acceptada majoritariament, l'Ajuntament la asumeix com a propia i la du a terme.
-      title: Es fa
-    proposal:
-      description: Espai obert per a propostes ciutadanes sobre el tipus de ciutat en el que volem viure.
-      title: Proposes
+    feed:
+      most_active:
+        debates: "Debats més actius"
+        proposals: "Propostes més actives"
+        processes: "Processos oberts"
+      see_all_debates: Veure tots els debats
+      see_all_proposals: Veure totes les propostes
+      see_all_processes: Veure tots els processos
+      process_label: Procés
+      see_process: Veure procés
+    cards:
+      title: Destacades
     recommended:
       title: Recomanacions que et poden interessar
+      help: "Estes recomanacions es generen per les etiquetes dels debats i propostes que estàs seguint."
       debates:
         title: Debats recomanats
         btn_text_link: Tots els debats recomanats
@@ -775,6 +806,7 @@ val:
         btn_text_link: Totes les propostes recomanades
       budget_investments:
         title: Pressupostos recomanats
+      slide: "Veure %{title}"
     verification:
       i_dont_have_an_account: No tinc compte, vull crear-ne un i verificar-lo
       i_have_an_account: Ja tinc un compte que vull verificar
@@ -802,6 +834,7 @@ val:
     help: "Pots afegir enllaços de %{models} en %{org}."
     submit: "Afegir"
     error: "Enllaç no vàlid. Recorda iniciar amb %{url}."
+    error_itself: "Enllaç no vàlid. No es pot relacionar un contingut amb ell mateix."
     success: "Has afegit nou contingut relacionat"
     is_related: "Es contingut relacionat?"
     score_positive: "Sí"
@@ -810,3 +843,6 @@ val:
       proposal: "Proposta"
       debate: "Debat"
       budget_investment: "Pressupost participatiu"
+  admin/widget:
+    header:
+      title: Administració

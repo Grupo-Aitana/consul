@@ -13,6 +13,7 @@ val:
       unmark_featured: Llevar destacat
       edit: Editar
       configure: Configurar
+      delete: Eliminar
     banners:
       index:
         title: Banner
@@ -40,7 +41,7 @@ val:
         form:
           error:
             one: "error va impedir guardar el banner"
-            other: 'errors van impedir guardar el banner'
+            other: "errors van impedir guardar el banner"
       new:
         creating: Crear banner
     activity:
@@ -68,6 +69,7 @@ val:
         new_link: Crear nou pressupost
         filter: Filtre
         filters:
+          open: Oberts
           finished: Finalitzats
         budget_investments: Vore propostes d'inversió
         table_name: Nom
@@ -105,6 +107,8 @@ val:
         no_groups: No hi ha grups creats encara. Cada usuari podrà votar en una sola partida de cada grup.
         add_group: Afegeix nou grup
         create_group: Crea un grup
+        edit_group: Editar grup
+        submit: Guardar group
         heading: Nom de la partida
         add_heading: Afegir partida
         amount: Quantitat
@@ -116,15 +120,19 @@ val:
         table_amount: Quantitat
         table_population: Població
         population_info: "El camp població de les partides pressupuestaries s'usa amb fins estadistics únicament, amb l'objectiu de mostrar el percentatge de vots en cada partida que represente un àrea amb població. Es un camp opciona, així que pots deixarlo en blanc si no s'aplica."
+        max_votable_headings: "Màxim número de partides en les que un usuari pot votar"
       winners:
         calculate: Calcular propostes guanyadores
         calculated: Calculant guanyadores, pot tardar algún minut.
+        recalculate: Recalcular propostes guanyadores
     budget_phases:
       edit:
         start_date: Data d'inici del procés
         end_date: Data de fi del procés
         summary: Resum
+        summary_help_text: Este text informarà a l'usuari sobre la fase. Per a mostrar-lo inclús quant la fase no estiga activa, selecciona la casella següent
         description: Descripció
+        description_help_text: Este text apareixerà en la capçalera quant la fase estiga activa
         enabled: Fase habilitada
         enabled_help_text: Aquesta fase serà pública en el calendari de fases del pressupost, així com activa per a qualsevol altre propòsit
         save_changes: Guardar canvis
@@ -134,18 +142,37 @@ val:
         administrator_filter_all: Tots els administradors
         valuator_filter_all: Tots els avaluadors
         tags_filter_all: Totes les etiquetes
+        advanced_filters: Filtres avançats
+        placeholder: Buscar projectes
+        sort_by:
+          placeholder: Ordenar per
+          id: ID
+          title: Títol
+          supports: Avals
         filters:
           all: Totes
           without_admin: Sense administrador
+          without_valuator: Sense avaluador asignat
+          under_valuation: En avaluació
           valuation_finished: Avaluació finalitzada
+          feasible: Viable
           selected: Seleccionades
+          undecided: Sense decidir
+          unfeasible: Inviable
+          max_per_heading: Màx. avals per districte
           winners: Guanyadores
+          one_filter_html: "Filtres aplicats: <b><em>%{filter}</em></b>"
+          two_filters_html: "Filtres aplicats: <b><em>%{filter}, %{advanced_filters}}</em></b>"
+        buttons:
+          search: Cercar
+          filter: Filtrar
         download_current_selection: "Baixar la selecció actual"
         no_budget_investments: "No hi ha projectes d'inversió."
         title: Propostes d'inversió
         assigned_admin: Administrador assignat
         no_admin_assigned: Sense admin assignat
         no_valuators_assigned: Sense avaluador
+        no_valuation_groups: Sense grups avaluadors
         feasibility:
           feasible: "Viable (%{price})"
           unfeasible: "Inviable"
@@ -157,10 +184,15 @@ val:
         table_supports: "Avals"
         table_admin: "Administrador"
         table_valuator: "Avaluador"
+        table_valuation_group: "Grup avaluador"
         table_geozone: "Ámbit d'actuació"
         table_feasibility: "Viabilitat"
         table_valuation_finished: "Av. Fin."
+        table_selection: "Selecció"
+        table_evaluation: "Veure a evaluadors"
         table_incompatible: "Incompatible"
+        cannot_calculate_winners: El pressupost ha d'estar en les fases "Votació final", "Votació finalitzada" o "Resultats" per a poder calcular les propostes guanyadores
+        see_results: "Veure resultats"
       show:
         assigned_admin: Administrador asignat
         assigned_valuators: Evaluadors asignats
@@ -170,6 +202,7 @@ val:
         edit_classification: Edita classificació
         by: Autor
         sent: Data
+        group: Grup
         heading: Partida
         dossier: Informe
         edit_dossier: Editar informe
@@ -190,6 +223,13 @@ val:
           title: Guanyadores
           "true": "Si"
           "false": "No"
+        image: "Imatge"
+        see_image: "Veure imatge"
+        no_image: "Sense imatge"
+        documents: "Documents"
+        see_documents: "Veure documents (%{count})"
+        no_documents: "Sense documents"
+        valuator_groups: "Grups d'Avaluadors"
       edit:
         classification: Classificació
         compatibility: Compatibilitat
@@ -203,6 +243,7 @@ val:
         tags: Etiquetes
         tags_placeholder: "Escriu les etiquetes que vulguis separades per comes (,)"
         undefined: Sense definir
+        user_groups: "Grups"
       search_unfeasible: Buscar inviables
     milestones:
       index:
@@ -210,15 +251,22 @@ val:
         table_title: "Títol"
         table_description: "Descripció"
         table_publication_date: "Data de publicació"
+        table_status: Estat
         table_actions: "Accions"
         delete: "Eliminar fita"
         no_milestones: "No hi ha fites definides"
         image: "Imatge"
         show_image: "Mostrar imatge"
         documents: "Documents"
+      form:
+        add_language: Afegir idioma
+        remove_language: Eliminar idioma
+        admin_statuses: Estat administratiu de les propostes
+        no_statuses_defined: No hi ha estats de projectes definits
       new:
         creating: Crear fita
         date: Data
+        description: Descripció
       edit:
         title: Editar fita
       create:
@@ -227,6 +275,26 @@ val:
         notice: Fita actualitzada
       delete:
         notice: Fita eliminada correctament
+    statuses:
+      index:
+        title: Estat de les propostes
+        empty_statuses: No hi ha estats de projectes creats
+        new_status: Crear nou estat de la proposta
+        table_name: Nom
+        table_description: Descripció
+        table_actions: Accions
+        delete: Esborrar
+        edit: Editar
+      edit:
+        title: Edita l'estat de la proposta
+      update:
+        notice: Estat de la proposta actualitzat correctament
+      new:
+        title: Crear estat de la proposta
+      create:
+        notice: Estat de la proposta creat correctament
+      delete:
+        notice: Estat de la proposta esborrat correctament
     comments:
       index:
         filter: Filtre
@@ -327,9 +395,6 @@ val:
           title: Propostes
           back: Tornar
         form:
-          header_information: Capçelera d'informació
-          header_information_description: Proporciona informació sobre el recorregut de les propostes. Aquest text es mostrarà com una alerta en la capcelera de la secció de Popostes dins d'aquest proces. Utilitza Markdown per a formatejar el text.
-          header_information_placeholder: Afegeix informació per a la capcelera de les propostes
           custom_categories: Categoríes
           custom_categories_description: Categoríes que l'usuari pot seleccionar al crear la proposta.
       draft_versions:
@@ -397,8 +462,10 @@ val:
             error: Error
         form:
           add_option: Afegir resposta
+          title: Pregunta
           title_placeholder: Escriu un títol a la pregunta
           value_placeholder: Escriu una resposta
+          question_options: "Possibles respostes (opcional, per defecte respostes obertes)"
         index:
           back: Tornar
           title: Preguntes associades a aquest proces
@@ -441,6 +508,9 @@ val:
       administrators: Administradors
       managers: Gestors
       moderators: Moderadors
+      emails: Enviament d'emails
+      newsletters: Butlletins informatius
+      emails_download: Descàrrega de emails
       valuators: Evaluadors
       poll_officers: Presidents de taula
       polls: Votacions
@@ -454,15 +524,15 @@ val:
       stats: Estadístiques
       signature_sheets: Fulls de signatures
       site_customization:
+        homepage: Pàgina principal
         pages: Personalitzar pàgines
         images: Personalitzar imatges
         content_blocks: Personalitzar blocs
-      title_categories: Categoríes
       title_moderated_content: Contingut moderat
       title_budgets: Pressupostos
       title_polls: Votacions
       title_profiles: Perfils
-      title_banners: Banners
+      title_settings: Configuració
       title_site_customization: Personalitzar lloc
       legislation: Legislació col·laborativa
       users: Usuaris
@@ -489,9 +559,55 @@ val:
         delete: Eliminar
       search:
         title: 'Moderadors: Cerca d''usuaris'
+    segment_recipient:
+      all_users: Tots els usuaris
+      administrators: Administradors
+      proposal_authors: Autors de propostes
+      investment_authors: Usuaris autors de propostes en els actuals pressupostos
+      feasible_and_undecided_investment_authors: "Usuaris autors d'algun projecte en els actuals pressupostos que no cumplisca: [evaluació finalitzada inviable]"
+      selected_investment_authors: Autors de projectes seleccionades en els actuals pressupostos
+      winner_investment_authors: Usuaris autors de projectes guanyadors en els actuals pressupostos
+      not_supported_on_current_budget: Usuaris que no han avalat projectes en els actuals pressupostos
+      invalid_recipients_segment: "El segment de destinataris es invàlid"
     newsletters:
+      create_success: Butlletí informatiu creat correctament
+      update_success: Butlletí informatiu actualitzat correctament
+      send_success: Butlletí informatiu enviat correctament
+      delete_success: Butlletí informatiu esborrat correctament
       index:
         title: Enviament de newsletters
+        new_newsletter: Nou butlletí informatiu
+        subject: Asumpte
+        segment_recipient: Destinataris
+        sent: Enviat
+        actions: Accions
+        draft: Esborrany
+        edit: Editar
+        delete: Esborrar
+        preview: Vista previa
+        empty_newsletters: No hi ha butlletins informatius per a mostrar
+      new:
+        title: Nou butlletí informatiu
+        from: Direcció de email que apareixerà com a remitent del butlletí informatiu
+      edit:
+        title: Editar butlletí informatiu
+      show:
+        title: Vista previa del butlletí informatiu
+        send: Enviar
+        affected_users: (%{n} usuaris afectats)
+        sent_at: Enviada el
+        subject: Asumpte
+        segment_recipient: Destinataris
+        from: Direcció de email que apareixerà com a remitent del butlletí informatiu
+        body: Contingut del email
+        body_help_text: Així es com veuran el email els usuaris
+        send_alert: Estàs segur que vols enviar aquest butlletí informatiu a %{n} usuaris?
+    emails_download:
+      index:
+        title: Descàrrega de emails
+        download_segment: Descarregar direccions de email
+        download_segment_help_text: Descarrega en format CSV
+        download_emails_button: Descarregar llista de emails
     valuators:
       index:
         title: Avaluadors
@@ -500,6 +616,9 @@ val:
         description: Descripció
         no_description: Sense descripció
         no_valuators: No hi ha avaluadors.
+        valuator_groups: "Grups d'Avaluadors"
+        group: "Grup"
+        no_group: "Sense grup"
       valuator:
         add: Afegir com a avaluador
         delete: Borrar
@@ -514,6 +633,30 @@ val:
         in_evaluation_count: En avaluació
         total_count: Total
         cost: Cost total
+      form:
+        edit_title: "Avaluadors: Editar avaluador"
+        update: "Actualitzar avaluador"
+        updated: "Avaluador actualitzat correctament"
+      show:
+        description: "Descripció"
+        email: "Email"
+        group: "Grup"
+        no_description: "Sense descripció"
+        no_group: "Sense grup"
+    valuator_groups:
+      index:
+        title: "Grups d'Avaluadors"
+        new: "Crear grups d'avaluadors"
+        name: "Nom"
+        members: "Membres"
+        no_groups: "No hi ha grups d'avaluadors"
+      show:
+        title: "Grup d'avaluadors: %{group}"
+        no_valuators: "No hi ha avaluadors asignats a este grup"
+      form:
+        name: "Nom del grup"
+        new: "Crear grup d'avaluadors"
+        edit: "Guardar grups d'avaluadors"
     poll_officers:
       index:
         title: Presidents de taula
@@ -800,8 +943,10 @@ val:
       flash:
         updated: Valor actualitzat
       index:
-        banners: Stil de banner
+        banners: Estil del banner
         banner_imgs: Imatges del banner
+        no_banners_images: No hi ha imatges de banner
+        no_banners_styles: No hi ha estils de banner
         title: Configuració global
         update_setting: Actualitzar
         feature_flags: Funcionalitats
@@ -841,6 +986,9 @@ val:
       actions: Accions
       title: Títol
       description: Descripció
+      image: Imatge
+      show_image: Mostrar imatge
+      moderated_content: "Revisa el contigut moderat pels moderadors, i confirma si la moderació s'ha realitzat correctament."
     spending_proposals:
       index:
         geozone_filter_all: Tots els àmbits d'actuació
@@ -1003,6 +1151,7 @@ val:
         add_tag: Afegeix un nou tema de debat
         title: Temes de debat
         topic: Tema
+        help: "Quant un usuari crea una proposta se li suggerixen com a etiquetes per defecte els següents temes."
       name:
         placeholder: Escriu el nom del tema
     users:
@@ -1025,11 +1174,11 @@ val:
         title: Verificacions incompletes
     site_customization:
       content_blocks:
-        form:
-          content_blocks_information: Informació sobre els blocs de text
-          content_block_about: Pots crear blocs de HTML que s'incrustaràn en la capçalera o el peu del teu CONSUL.
-          content_block_top_links_html: "Els <strong>blocs de la capçalera (top_links)</strong> són blocs d'enllaços que s'han de crear amb aquest format:"
-          content_block_footer_html: "Els <strong>blocs del peu (footer)</strong> poden tenir qualsevol format i es poden utilitzar per guardar empremtes Javascript, contingut CSS o contingut HTML personalitzat."
+        information: Informació sobre els blocs de text
+        about: Pots crear blocs de HTML que s'incrustaràn en la capçalera o al peu del teu CONSUL.
+        top_links_html: "Els <strong>blocs de la capçalera (top_links)</strong> son blocs d'enllaços que han de crearse en aquest format:"
+        footer_html: "Els <strong>blocs del peu (footer)</strong> poden tenir qualsevol format i es poden utilitzar per guardar empremtes Javascript, contingut CSS o contingut HTML personalitzat."
+        no_blocks: "No hi ha blocs de text."
         create:
           notice: Bloc creat correctament
           error: No s'ha pogut crear el bloc
@@ -1095,3 +1244,31 @@ val:
           status_draft: Esborrany
           status_published: Publicada
           locale: Idioma
+    homepage:
+      title: Pàgina principal
+      description: Els moduls actius apareixeran en la pàgina principal en el mateix ordre que ací.
+      header_title: Capçalera
+      no_header: No hi ha capçalera.
+      create_header: Crear capçalera
+      cards_title: Targetes
+      create_card: Crear targeta
+      no_cards: No hi ha targetes.
+      cards:
+        title: Títol
+        description: Descripció
+        link_text: Text de l'enllaç
+        link_url: URL de l'enllaç
+      feeds:
+        proposals: Propostes
+        debates: Debats
+        processes: Processos
+      new:
+        header_title: Nova capçalera
+        submit_header: Crear capçalera
+        card_title: Nova targeta
+        submit_card: Crear targeta
+      edit:
+        header_title: Editar capçalera
+        submit_header: Guardar capçalera
+        card_title: Editar targeta
+        submit_card: Guardar targeta
