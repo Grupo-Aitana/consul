@@ -125,10 +125,6 @@ es:
       budget/investment/milestone:
         status_id: "Estado actual del proyecto (opcional)"
         title: "Título"
-<<<<<<< HEAD
-        description: "Descripción (opcional si se ha asignado un estado de proyecto)"
-=======
->>>>>>> i18n_master
         publication_date: "Fecha de publicación"
       budget/investment/status:
         name: "Nombre"
