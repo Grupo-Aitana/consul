@@ -36,6 +36,7 @@ es:
         login: Entrar
         logout: Salir
         signup: Registrarse
+        login_certificate: Identificarse mediante certificado digital
     organizations:
       registrations:
         new:

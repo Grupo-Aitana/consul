@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
 
   devise :database_authenticatable, :rememberable, :registerable, :confirmable, :recoverable,
          :trackable, :validatable, :omniauthable, :async, :password_expirable, :secure_validatable,
+         :saml_authenticatable, :trackable,
          authentication_keys: [:login]
 
 

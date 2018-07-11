@@ -36,6 +36,7 @@ val:
         login: Iniciar sessió
         logout: Eixir
         signup: Registrarse
+        login_certificate: Identificar-se amb certificat digital
     organizations:
       registrations:
         new:

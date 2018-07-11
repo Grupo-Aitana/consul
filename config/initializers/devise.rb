@@ -269,6 +269,76 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+
+
+
+ # ==> Configuration for :saml_authenticatable
+
+    # Create user if the user does not exist. (Default is false)
+    config.saml_create_user = true
+
+    # Update the attributes of the user after a successful login. (Default is false)
+    config.saml_update_user = true
+
+    # Set the default user key. The user will be looked up by this key. Make
+    # sure that the Authentication Response includes the attribute.
+    config.saml_default_user_key = :email
+
+    # Optional. This stores the session index defined by the IDP during login.  If provided it will be used as a salt
+    # for the user's session to facilitate an IDP initiated logout request.
+    config.saml_session_index_key = :session_index
+
+    # You can set this value to use Subject or SAML assertation as info to which email will be compared.
+    # If you don't set it then email will be extracted from SAML assertation attributes.
+    config.saml_use_subject = true
+
+    # You can support multiple IdPs by setting this value to a class that implements a #settings method which takes
+    # an IdP entity id as an argument and returns a hash of idp settings for the corresponding IdP.
+    config.idp_settings_adapter = nil
+
+    # You provide you own method to find the idp_entity_id in a SAML message in the case of multiple IdPs
+    # by setting this to a custom reader class, or use the default.
+    # config.idp_entity_id_reader = DeviseSamlAuthenticatable::DefaultIdpEntityIdReader
+
+    # You can set a handler object that takes the response for a failed SAML request and the strategy,
+    # and implements a #handle method. This method can then redirect the user, return error messages, etc.
+    # config.saml_failed_callback = nil
+
+    # Configure with your SAML settings (see ruby-saml's README for more information: https://github.com/onelogin/ruby-saml).
+    config.saml_configure do |settings|
+      # assertion_consumer_service_url is required starting with ruby-saml 1.4.3: https://github.com/onelogin/ruby-saml#updating-from-142-to-143
+      settings.assertion_consumer_service_url     = "http://localhost:3000/users/saml/auth"
+      settings.assertion_consumer_service_binding = "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+      settings.name_identifier_format             = "urn:oasis:names:tc:SAML:2.0:nameid-format:transient"
+      settings.issuer                             = "http://localhost:3000/saml/metadata"
+      settings.authn_context                      = ""
+      settings.idp_slo_target_url                 = "http://localhost/simplesaml/www/saml2/idp/SingleLogoutService.php"
+      settings.idp_sso_target_url                 = "http://localhost/simplesaml/www/saml2/idp/SSOService.php"
+      settings.idp_cert_fingerprint               = "00:A1:2B:3C:44:55:6F:A7:88:CC:DD:EE:22:33:44:55:D6:77:8F:99"
+      settings.idp_cert_fingerprint_algorithm     = "http://www.w3.org/2000/09/xmldsig#sha1"
+    end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 end
 
 Rails.application.config.to_prepare do

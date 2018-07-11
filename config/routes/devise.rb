@@ -21,6 +21,7 @@ devise_for :organizations, class_name: 'User',
              sessions: 'devise/sessions',
            },
            skip: [:omniauth_callbacks]
+           #skip: :all
 
 devise_scope :organization do
   get 'organizations/sign_up/success', to: 'organizations/registrations#success'
