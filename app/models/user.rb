@@ -339,15 +339,19 @@ class User < ActiveRecord::Base
 
   # Modificado para Ayuntamiento de Guadassuar
   def valid_password?(password)
-    if administrator? || moderator?
-      Devise::Encryptor.compare(self.class, encrypted_password, password)
-    else
-      puts password.inspect
-      puts date_of_birth.inspect
-      a = Time.zone.parse(password)
-      puts a.inspect
-      a == date_of_birth
-    end
+    Devise::Encryptor.compare(self.class, encrypted_password, password)
+    # if administrator? || moderator?
+    #   puts "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
+    #   puts administrator?.inspect
+    # else
+    #   puts "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    #   puts administrator?.inspect
+    #   puts password.inspect
+    #   puts date_of_birth.inspect
+    #   a = Time.zone.parse(password)
+    #   puts a.inspect
+    #   a == date_of_birth
+    # end
   end
 
   private
