@@ -24,10 +24,12 @@
     <%= link_to t("devise_views.menu.login_items.login"),
                 new_user_session_path, rel: "nofollow" %>
   </li>
-  <li>
-    <%= link_to t("devise_views.menu.login_items.login_certificate"),
-                new_saml_user_session_path, rel: "nofollow" %>
-  </li>
+  <% if feature?('saml_authentication') %>
+    <li>
+      <%= link_to t("devise_views.menu.login_items.login_certificate"),
+                  new_saml_user_session_path, rel: "nofollow" %>
+    </li>
+  <% end %>
   <% if feature?('user_registration') %>
     <li>
       <%= link_to t("devise_views.menu.login_items.signup"),
