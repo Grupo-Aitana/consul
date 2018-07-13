@@ -27,5 +27,23 @@ class UserImporter
     lcr.save
   end
 
+  def self.crear_usuarios
+    LocalCensusRecord.all.each do |lc|
+      u = User.find_or_initialize_by(username: lc.document_number)
+      u.email = "#{lc.document_number}@guadassuar.es"
+      u.confirmed_at = Date.today
+      u.username = "#{lc.document_number}"
+      u.document_number = "#{lc.document_number}"
+      u.document_type = "#{lc.document_type}"
+      u.residence_verified_at = Date.today
+      u.verified_at = Date.today
+      u.date_of_birth = lc.date_of_birth
+      u.password = u.password_confirmation = lc.date_of_birth.strftime("%d/%m/%Y")
+      u.terms_of_service = "1"
+      u.save
+      puts u.errors.inspect
+    end
+  end
+
 
 end

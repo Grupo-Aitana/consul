@@ -68,8 +68,8 @@ val:
         title: Has oblidat la teua contrasenya?
     sessions:
       new:
-        login_label: DNI
-        password_label: Data de naixement
+        login_label: Nom d'usuari
+        password_label: Contrasenya
         remember_me: Recordam
         submit: Entrar
         title: Iniciar sessió

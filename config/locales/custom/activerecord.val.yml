@@ -139,11 +139,11 @@ val:
         description: "Descripció"
         terms_of_service: "Termes de servici"
       user:
-        login: "DNI"
+        login: "Nom d'usuari"
         email: "Correu electrónic"
         username: "Nom d'usuari"
         password_confirmation: "Confirmació de contrasenya"
-        password: "Data de naixement (dd/mm/aaaa)"
+        password: "Contrasenya"
         current_password: "Contrasenya actual"
         phone_number: "Telèfon"
         official_position: "Càrrec públic"

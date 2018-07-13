@@ -68,8 +68,8 @@ es:
         title: '¿Has olvidado tu contraseña?'
     sessions:
       new:
-        login_label: DNI
-        password_label: Fecha de nacimiento
+        login_label: Nombre de usuario
+        password_label: Contraseña
         remember_me: Recordarme
         submit: Entrar
         title: Iniciar sesión
