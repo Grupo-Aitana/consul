@@ -312,8 +312,8 @@ Devise.setup do |config|
       settings.name_identifier_format             = "urn:oasis:names:tc:SAML:2.0:nameid-format:transient"
       settings.issuer                             = "http://localhost:3000/saml/metadata"
       settings.authn_context                      = ""
-      settings.idp_slo_target_url                 = "http://localhost/simplesaml/www/saml2/idp/SingleLogoutService.php"
-      settings.idp_sso_target_url                 = "http://localhost/simplesaml/www/saml2/idp/SSOService.php"
+      settings.idp_slo_target_url                 = "https://se-pasarela.clave.gob.es/Proxy/ServiceProvider"
+      settings.idp_sso_target_url                 = "https://se-pasarela.clave.gob.es/Proxy/ServiceProvider"
       settings.idp_cert_fingerprint               = "00:A1:2B:3C:44:55:6F:A7:88:CC:DD:EE:22:33:44:55:D6:77:8F:99"
       settings.idp_cert_fingerprint_algorithm     = "http://www.w3.org/2000/09/xmldsig#sha1"
     end
