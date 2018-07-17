@@ -10,7 +10,7 @@
         </span>
       <% else %>
         <%= link_to answer.title,
-          answer_question_path(question, answer: answer.title, token: token),
+          answer_question_path(question, answer: answer.title, token: token, managed_user_id: managed_user.id),
           method: :post,
           remote: true,
           title: t("poll_questions.show.vote_answer", answer: answer.title),

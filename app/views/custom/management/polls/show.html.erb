@@ -109,7 +109,7 @@
       <% end %>
 
       <% @questions.each do |question| %>
-        <%= render 'polls/questions/question', question: question, token: @token %>
+        <%= render '/management/polls/questions/question', question: question, token: @token %>
       <% end %>
 
       <% if poll_voter_token(@poll, current_user).empty? %>

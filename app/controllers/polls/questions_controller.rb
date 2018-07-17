@@ -6,7 +6,12 @@ class Polls::QuestionsController < ApplicationController
   has_orders %w{most_voted newest oldest}, only: :show
 
   def answer
-    answer = @question.answers.find_or_initialize_by(author: current_user)
+    if current_user.manager? && params[:managed_user_id].present?
+      managed_user = User.find(params[:managed_user_id])
+      answer = @question.answers.find_or_initialize_by(author: managed_user)
+    else
+      answer = @question.answers.find_or_initialize_by(author: current_user)
+    end
     token = params[:token]
 
     answer.answer = params[:answer]
