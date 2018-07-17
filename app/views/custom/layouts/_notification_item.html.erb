@@ -5,7 +5,7 @@
         <%= t("layouts.header.notification_item.notifications") %>
       </span>
 
-      <% if current_user.notifications.unread.count >= 0 %>
+      <% if current_user.notifications.unread.count > 0 %>
         <span class="icon-circle" aria-hidden="true"></span>
         <span class="icon-notification" aria-hidden="true" title="<%= t('layouts.header.notification_item.new_notifications', count: current_user.notifications_count).html_safe %>"></span>
         <!--<small class="show-for-small-only">-->
