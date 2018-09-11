@@ -103,6 +103,9 @@ en:
       poll:
         one: "Poll"
         other: "Polls"
+      proposal_notification:
+        one: "Proposal notification"
+        other: "Proposal notifications"
     attributes:
       budget:
         name: "Name"
@@ -277,6 +280,10 @@ en:
               min_image_width: "Image Width must be at least %{required_min_width}px"
               min_image_height: "Image Height must be at least %{required_min_height}px"
         newsletter:
+          attributes:
+            segment_recipient:
+              invalid: "The user recipients segment is invalid"
+        admin_notification:
           attributes:
             segment_recipient:
               invalid: "The user recipients segment is invalid"

@@ -171,8 +171,7 @@
 
           <% if @proposal.successful? %>
             <p>
-              <%= t("proposals.proposal.successful",
-                  voting: link_to(t("proposals.proposal.voting"), polls_path)).html_safe %>
+              <%= t("proposals.proposal.successful") %>
             </p>
             <% if can? :create, Poll::Question %>
               <p class="text-center">
@@ -224,8 +223,8 @@
   </div>
 </div>
 
-<div class="tabs-content" data-tabs-content="proposals_tabs" role="tablist">
-  <div class="tabs-panel is-active" id="tab-comments" role="tab">
+<div class="tabs-content" data-tabs-content="proposals_tabs">
+  <div class="tabs-panel is-active" id="tab-comments">
     <%= render "proposals/comments" %>
   </div>
 

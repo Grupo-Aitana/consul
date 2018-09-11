@@ -100,6 +100,9 @@ es:
       poll:
         one: "Votación"
         other: "Votaciones"
+      proposal_notification:
+        one: "Notificación de propuesta"
+        other: "Notificaciones de propuestas"
     attributes:
       budget:
         name: "Nombre"
@@ -273,6 +276,10 @@ es:
               min_image_width: "La imagen debe tener al menos %{required_min_width}px de largo"
               min_image_height: "La imagen debe tener al menos %{required_min_height}px de alto"
         newsletter:
+          attributes:
+            segment_recipient:
+              invalid: "El segmento de usuarios es inválido"
+        admin_notification:
           attributes:
             segment_recipient:
               invalid: "El segmento de usuarios es inválido"

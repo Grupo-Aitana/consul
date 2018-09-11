@@ -2,23 +2,21 @@ module Translatable
   extend ActiveSupport::Concern
 
   included do
-    before_action :set_translation_locale
     before_action :delete_translations, only: [:update]
   end
 
   private
 
-    def translation_params(params)
-      resource_model.globalize_attribute_names.select { |k, v| params.include?(k.to_sym) && params[k].present? }
-    end
-
-    def set_translation_locale
-      Globalize.locale = I18n.locale
+    def translation_params(resource_model)
+      resource_model.translated_attribute_names.product(enabled_translations).map do |attr_name, loc|
+        resource_model.localized_attr_name_for(attr_name, loc)
+      end
     end
 
     def delete_translations
-      locales = resource_model.globalize_locales.
-      select { |k, v| params[:delete_translations].include?(k.to_sym) && params[:delete_translations][k] == "1" }
+      locales = resource.translated_locales
+                        .select { |l| params.dig(:enabled_translations, l) == "0" }
+
       locales.each do |l|
         Globalize.with_locale(l) do
           resource.translation.destroy
@@ -26,4 +24,9 @@ module Translatable
       end
     end
 
+    def enabled_translations
+      params.fetch(:enabled_translations)
+            .select { |_, v| v == '1' }
+            .keys
+    end
 end
