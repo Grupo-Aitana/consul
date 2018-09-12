@@ -1,6 +1,7 @@
 class UserImporter
 
   require 'roo'
+  require 'spreadsheet'
 
   def self.definir_columnas
     {
@@ -16,23 +17,43 @@ class UserImporter
   end
 
   def self.importar(columna)
-    if File.exist?("#{Rails.root}/padron.xlsx")
-      xls = Roo::Spreadsheet.open("#{Rails.root}/padron.xlsx", extension: :xlsx)
-      rows_total = 1
-      xls.each_row_streaming(offset: 1) do |row|
-        hash_user = {
-          numero_documento: "#{row[columna[:numero_documento]].value.to_i}#{row[columna[:letra_documento]].value}",
-          tipo_documento: row[columna[:tipo_documento]].value.to_i,
-          fecha_nacimiento: row[columna[:fecha_nacimiento]].value.to_date,
-          codigo_postal: row[columna[:codigo_postal]].value.to_i,
-          nombre: row[columna[:nombre]].value,
-          apellido1: row[columna[:apellido1]].value,
-          apellido2: row[columna[:apellido2]].value
-        }
-        rows_total += 1
-        insertar(hash_user)
+    rows_total = 1
+    source = "#{Rails.root}/padron.xls"
+    if File.exist?(source)
+      if source.split('.').last == 'xlsx'
+        xls = Roo::Spreadsheet.open(source)
+        xls.each_row_streaming do |row|
+          hash_user = {
+            numero_documento: "#{row[columna[:numero_documento]].value&.to_i}#{row[columna[:letra_documento]]&.value}",
+            tipo_documento: row[columna[:tipo_documento]]&.value&.to_i,
+            fecha_nacimiento: row[columna[:fecha_nacimiento]]&.value&.to_date,
+            codigo_postal: row[columna[:codigo_postal]]&.value&.to_i,
+            nombre: row[columna[:nombre]]&.value,
+            apellido1: row[columna[:apellido1]]&.value,
+            apellido2: row[columna[:apellido2]]&.value
+          }
+          rows_total += 1
+          insertar(hash_user)
+        end
+      elsif source.split('.').last == 'xls'
+        xls = Spreadsheet.open(source)
+        xls.worksheets.first.rows.each do |row|
+          hash_user = {
+            numero_documento: "#{row[columna[:numero_documento]]&.to_i}#{row[columna[:letra_documento]]}",
+            tipo_documento: row[columna[:tipo_documento]]&.to_i,
+            fecha_nacimiento: row[columna[:fecha_nacimiento]]&.to_date,
+            codigo_postal: row[columna[:codigo_postal]]&.to_i,
+            nombre: row[columna[:nombre]],
+            apellido1: row[columna[:apellido1]],
+            apellido2: row[columna[:apellido2]]
+          }
+          rows_total += 1
+          insertar(hash_user)
+        end
       end
-      "Se han encontrado #{rows_total} usuarios."
+      "Se han encontrado #{rows_total-1} usuarios."
+    else
+      "No se ha encontrado el fichero fuente."
     end
   end
 
