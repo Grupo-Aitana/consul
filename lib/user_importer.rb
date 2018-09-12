@@ -18,6 +18,7 @@ class UserImporter
 
   def self.importar(columna)
     rows_total = 1
+    rows_errors = 0
     source = "#{Rails.root}/padron.xls"
     if File.exist?(source)
       if source.split('.').last == 'xlsx'
@@ -33,7 +34,11 @@ class UserImporter
             apellido2: row[columna[:apellido2]]&.value
           }
           rows_total += 1
-          insertar(hash_user)
+          if hash_user[:numero_documento].nil? or hash_user[:tipo_documento].nil? or hash_user[:fecha_nacimiento].nil? or hash_user[:codigo_postal].nil?
+            rows_errors += 1
+          else
+            insertar(hash_user)
+          end
         end
       elsif source.split('.').last == 'xls'
         xls = Spreadsheet.open(source)
@@ -48,10 +53,14 @@ class UserImporter
             apellido2: row[columna[:apellido2]]
           }
           rows_total += 1
-          insertar(hash_user)
+          if hash_user[:numero_documento].nil? or hash_user[:tipo_documento].nil? or hash_user[:fecha_nacimiento].nil? or hash_user[:codigo_postal].nil?
+            rows_errors += 1
+          else
+            insertar(hash_user)
+          end
         end
       end
-      "Se han encontrado #{rows_total-1} usuarios."
+      "Se han encontrado #{rows_total-1} usuarios y #{rows_errors} error(es)."
     else
       "No se ha encontrado el fichero fuente."
     end
