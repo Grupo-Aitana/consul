@@ -2,20 +2,37 @@ class UserImporter
 
   require 'roo'
 
-  def self.importar
-    xls = Roo::Spreadsheet.open("#{Rails.root}/padron.xlsx", extension: :xlsx)
-    xls.each_row_streaming(offset: 1) do |row|
-      hash_user = {
-        nombre: row[6].cell_value,
-        apellido1: "#{row[3].cell_value} #{row[2].cell_value}".strip,
-        apellido2: "#{row[5].cell_value} #{row[4].cell_value}".strip,
-        sexo: row[7].cell_value,
-        numero_documento: "#{row[8].cell_value}#{row[9].cell_value}",
-        tipo_documento: row[11].cell_value,
-        fecha_nacimiento: row[14].value.to_date,
-        codigo_postal: row[25].value
-      }
-      insertar(hash_user)
+  def self.definir_columnas
+    {
+      numero_documento: 7,
+      letra_documento: 8,
+      tipo_documento: 10,
+      fecha_nacimiento: 13,
+      codigo_postal: 24,
+      nombre: 5,
+      apellido1: 1,
+      apellido2: 3,
+    }
+  end
+
+  def self.importar(columna)
+    if File.exist?("#{Rails.root}/padron.xlsx")
+      xls = Roo::Spreadsheet.open("#{Rails.root}/padron.xlsx", extension: :xlsx)
+      rows_total = 1
+      xls.each_row_streaming(offset: 1) do |row|
+        hash_user = {
+          numero_documento: "#{row[columna[:numero_documento]].value.to_i}#{row[columna[:letra_documento]].value}",
+          tipo_documento: row[columna[:tipo_documento]].value.to_i,
+          fecha_nacimiento: row[columna[:fecha_nacimiento]].value.to_date,
+          codigo_postal: row[columna[:codigo_postal]].value.to_i,
+          nombre: row[columna[:nombre]].value,
+          apellido1: row[columna[:apellido1]].value,
+          apellido2: row[columna[:apellido2]].value
+        }
+        rows_total += 1
+        insertar(hash_user)
+      end
+      "Se han encontrado #{rows_total} usuarios."
     end
   end
 
