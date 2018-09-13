@@ -12,7 +12,9 @@ class UserImporter
       codigo_postal: 24,
       nombre: 5,
       apellido1: 1,
+      apellido1_particula: 2,
       apellido2: 3,
+      apellido2_particula: 4
     }
   end
 
@@ -30,8 +32,8 @@ class UserImporter
             fecha_nacimiento: row[columna[:fecha_nacimiento]]&.value&.to_date,
             codigo_postal: row[columna[:codigo_postal]]&.value&.to_i,
             nombre: row[columna[:nombre]]&.value,
-            apellido1: row[columna[:apellido1]]&.value,
-            apellido2: row[columna[:apellido2]]&.value
+            apellido1: "#{row[columna[:apellido1]]&.value}#{row[columna[:apellido1_particula]]&.value}"&.strip,
+            apellido2: "#{row[columna[:apellido2]]&.value}#{row[columna[:apellido2_particula]]&.value}"&.strip
           }
           rows_total += 1
           if hash_user[:numero_documento].nil? or hash_user[:tipo_documento].nil? or hash_user[:fecha_nacimiento].nil? or hash_user[:codigo_postal].nil?
@@ -48,9 +50,9 @@ class UserImporter
             tipo_documento: row[columna[:tipo_documento]]&.to_i,
             fecha_nacimiento: row[columna[:fecha_nacimiento]]&.to_date,
             codigo_postal: row[columna[:codigo_postal]]&.to_i,
-            nombre: row[columna[:nombre]],
-            apellido1: row[columna[:apellido1]],
-            apellido2: row[columna[:apellido2]]
+            nombre: row[columna[:nombre]]&.to_s,
+            apellido1: "#{row[columna[:apellido1]]}#{row[columna[:apellido1_particula]]}"&.strip,
+            apellido2: "#{row[columna[:apellido2]]}#{row[columna[:apellido2_particula]]}"&.strip
           }
           rows_total += 1
           if hash_user[:numero_documento].nil? or hash_user[:tipo_documento].nil? or hash_user[:fecha_nacimiento].nil? or hash_user[:codigo_postal].nil?
