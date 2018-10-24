@@ -394,14 +394,9 @@ GEM
       unicode-display_width (~> 1.0, >= 1.0.1)
     rubocop-rspec (1.26.0)
       rubocop (>= 0.53.0)
-<<<<<<< HEAD
     ruby-ole (1.2.12.1)
-    ruby-progressbar (1.9.0)
-    rubyzip (1.2.1)
-=======
     ruby-progressbar (1.10.0)
     rubyzip (1.2.2)
->>>>>>> upstream/master
     rvm1-capistrano3 (1.4.0)
       capistrano (~> 3.0)
       sshkit (>= 1.2)
