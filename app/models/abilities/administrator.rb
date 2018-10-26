@@ -18,6 +18,9 @@ module Abilities
       can :restore, Legislation::Proposal
       cannot :restore, Legislation::Proposal, hidden_at: nil
 
+      can :restore, Budget::Investment
+      cannot :restore, Budget::Investment, hidden_at: nil
+
       can :restore, User
       cannot :restore, User, hidden_at: nil
 
@@ -32,6 +35,9 @@ module Abilities
 
       can :confirm_hide, Legislation::Proposal
       cannot :confirm_hide, Legislation::Proposal, hidden_at: nil
+
+      can :confirm_hide, Budget::Investment
+      cannot :confirm_hide, Budget::Investment, hidden_at: nil
 
       can :confirm_hide, User
       cannot :confirm_hide, User, hidden_at: nil
@@ -51,8 +57,7 @@ module Abilities
       can :manage, Annotation
 
       can [:read, :update, :valuate, :destroy, :summary], SpendingProposal
-
-      can [:index, :read, :new, :create, :update, :destroy, :calculate_winners, :read_results], Budget
+      can [:index, :read, :new, :create, :update, :destroy, :calculate_winners], Budget
       can [:read, :create, :update, :destroy], Budget::Group
       can [:read, :create, :update, :destroy], Budget::Heading
       can [:hide, :update, :toggle_selection], Budget::Investment
