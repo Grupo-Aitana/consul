@@ -94,6 +94,8 @@ group :development, :staging do
   gem 'rubocop-rspec', '~> 1.26.0', require: false
   gem 'rvm1-capistrano3', '~> 1.4.0', require: false
   gem 'scss_lint', '~> 0.55.0', require: false
+end
+group :development do
   gem 'web-console', '~> 3.3.0'
 end
 
