@@ -61,7 +61,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-markdown-it', '~> 8.2.1'
 end
 
-group :development, :test do
+group :development, :test, :staging do
   gem 'bullet', '~> 5.7.0'
   gem 'byebug', '~> 10.0.0'
   gem 'factory_bot_rails', '~> 4.8.2'
@@ -84,7 +84,7 @@ group :test do
   gem 'selenium-webdriver', '~> 3.10'
 end
 
-group :development do
+group :development, :staging do
   gem 'capistrano', '~> 3.10.1', require: false
   gem 'capistrano-bundler', '~> 1.2', require: false
   gem 'capistrano-rails', '~> 1.4.0', require: false
