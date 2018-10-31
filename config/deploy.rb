@@ -36,7 +36,9 @@ set(:config_files, %w(
   database.yml
   secrets.yml
 ))
-
+set :rollbar_token, "949dd329e8c046198a34276e0b90232a"
+set :rollbar_env, Proc.new { fetch(:stage) }
+set :rollbar_role, Proc.new { :app }
 set :whenever_roles, -> { :app }
 
 namespace :deploy do
@@ -45,9 +47,8 @@ namespace :deploy do
   #before :starting, 'install_bundler_gem' # install bundler gem
 
   after :publishing, 'deploy:restart'
-  after :published, 'delayed_job:restart'
+  after :finished, 'delayed_job:restart'
   after :published, 'refresh_sitemap'
-
   after :finishing, 'deploy:cleanup'
 end
 

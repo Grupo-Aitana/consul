@@ -196,13 +196,14 @@ GEM
       socksify
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
-    i18n-tasks (0.9.27)
+    i18n-tasks (0.9.28)
       activesupport (>= 4.0.2)
       ast (>= 2.1.0)
       erubi
       highline (>= 2.0.0)
       i18n
       parser (>= 2.2.3.0)
+      rails-i18n
       rainbow (>= 2.2.2, < 4.0)
       terminal-table (>= 1.5.1)
     initialjs-rails (0.2.0.8)
@@ -245,7 +246,7 @@ GEM
       actionmailer (>= 3.2)
       letter_opener (~> 1.0)
       railties (>= 3.2)
-    loofah (2.2.2)
+    loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -349,6 +350,9 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
+    rails-i18n (4.0.9)
+      i18n (~> 0.7)
+      railties (~> 4.0)
     railties (4.2.10)
       actionpack (= 4.2.10)
       activesupport (= 4.2.10)
@@ -365,7 +369,7 @@ GEM
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
     rinku (2.0.4)
-    rollbar (2.15.6)
+    rollbar (2.18.0)
       multi_json
     roo (2.7.1)
       nokogiri (~> 1)
@@ -562,7 +566,7 @@ DEPENDENCIES
   redcarpet (~> 3.4.0)
   responders (~> 2.4.0)
   rinku (~> 2.0.2)
-  rollbar (~> 2.15.5)
+  rollbar
   roo
   rspec-rails (~> 3.6)
   rubocop (~> 0.54.0)
