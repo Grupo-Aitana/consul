@@ -11,6 +11,7 @@ require 'capistrano/rails/migrations'
 require 'capistrano/delayed_job'
 require 'whenever/capistrano'
 require 'rvm1/capistrano3'
+require 'rollbar/capistrano3'
 
 #SCM: Git
 require "capistrano/scm/git"
