@@ -6,44 +6,41 @@ module GlobalizeHelper
 
   def locale_options
     I18n.available_locales.map do |locale|
-      [name_for_locale(locale), neutral_locale(locale)]
+      [name_for_locale(locale), locale]
     end
   end
 
-  def display_translation?(locale)
-    same_locale?(neutral_locale(I18n.locale), neutral_locale(locale)) ? "" : "display: none"
+  def display_translation?(resource, locale)
+    if !resource || resource.translations.blank? ||
+       resource.locales_not_marked_for_destruction.include?(I18n.locale)
+      locale == I18n.locale
+    else
+      locale == resource.translations.first.locale
+    end
   end
 
-  def render_translations_to_delete(resource)
-    capture do
-      resource.globalize_locales.each do |locale|
-        concat translation_enabled_tag(locale, enable_locale?(resource, locale))
-      end
-    end
+  def display_translation_style(resource, locale)
+    "display: none;" unless display_translation?(resource, locale)
   end
 
   def translation_enabled_tag(locale, enabled)
     hidden_field_tag("enabled_translations[#{locale}]", (enabled ? 1 : 0))
   end
 
-  def css_to_display_translation?(resource, locale)
-    enable_locale?(resource, locale) ? "" : "display: none"
+  def enable_translation_style(resource, locale)
+    "display: none;" unless enable_locale?(resource, locale)
   end
 
   def enable_locale?(resource, locale)
-    resource.translated_locales.include?(neutral_locale(locale)) || locale == I18n.locale
+    if resource.translations.any?
+      resource.locales_not_marked_for_destruction.include?(locale)
+    else
+      locale == I18n.locale
+    end
   end
 
-  def highlight_current?(locale)
-    same_locale?(I18n.locale, locale) ? 'is-active' : ''
-  end
-
-  def show_delete?(locale)
-    display_translation?(locale)
-  end
-
-  def neutral_locale(locale)
-    locale.to_s.downcase.underscore.to_sym
+  def highlight_class(resource, locale)
+    "is-active" if display_translation?(resource, locale)
   end
 
   def globalize(locale, &block)

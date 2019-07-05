@@ -29,7 +29,7 @@ pt-BR:
         subject: "Instruções de desbloqueio"
     omniauth_callbacks:
       failure: "Não foi possível autorizá-lo como %{kind} porque \"%{reason}\"."
-      success: "Identificado com sucesso como %{kind}."
+      success: "Identificado com sucesso com %{kind}."
     passwords:
       no_token: "Você não pode acessar esta página, exceto por meio de um link de redefinição de senha. Se você tiver acessado através de um link de redefinição de senha, verifique se o URL está completo."
       send_instructions: "Em alguns minutos, você receberá um e-mail contendo instruções sobre como redefinir sua senha."
@@ -37,7 +37,7 @@ pt-BR:
       updated: "Sua senha foi alterada com sucesso. Autenticação bem sucedida."
       updated_not_active: "Sua senha foi alterada com sucesso."
     registrations:
-      destroyed: "Adeus! Sua conta foi cancelada. Esperamos te ver novamente em breve. De acordo com o seu pedido, os dados pessoais registrados como um usuário do site e os que fazem parte do arquivo 'Arquivo' sob a responsabilidade do 'Responsável' foram cancelados nos termos das disposições do artigo 16 da Ley Orgánica 15/1999 de Protección de Datos de Carácter Personal e do artigo 31. º de seu Reglamento de desarrollo (RD 1720/2007)."
+      destroyed: "Tchau! Sua conta foi cancelada. Esperamos te ver novamente em breve."
       signed_up: "Bem-vindo! Você foi autenticado."
       signed_up_but_inactive: "Seu registro foi bem sucedido, mas você não pode efetuar o login porque sua conta não foi ativada."
       signed_up_but_locked: "Seu registro foi bem sucedido, mas você não pode efetuar o login porque sua conta está bloqueada."

@@ -1,11 +1,11 @@
 pt-BR:
   pages:
-    census_terms: Para confirmar a conta, você deve ter 16 anos ou mais e ser registrado, tendo fornecido as informações solicitadas previamente. Ao aceitar o processo de verificação, você também concorda com a verificação dessas informações, bem como com os métodos de contato em tais arquivos. Os dados fornecidos serão incorporados e processados em um arquivo mencionado nos termos e condições de uso do Portal.
-    conditions: Termos e condições de uso
-    general_terms: Termos e condições de uso
+    conditions:
+      title: Termos e condições de uso
+      subtitle: AVISO LEGAL SOBRE AS CONDIÇÕES DE USO, PRIVACIDADE E PROTEÇÃO DE DADOS PESSOAIS DO PORTAL DO GOVERNO ABERTO
+      description: Página de informações sobre as condições de uso, privacidade e proteção de dados pessoais.
     help:
       title: "%{org} é uma plataforma de participação cidadã"
-      subtitle: "Em %{org} você pode fazer propostas, votar em consultas de cidadãos, propor projetos de orçamento participativo, decidir sobre regulamentos municipais e debates abertos para trocar opiniões com outras pessoas."
       guide: "Este guia explica para que servem e como funcionam cada uma das seções de %{org}."
       menu:
         debates: "Debates"
@@ -26,19 +26,12 @@ pt-BR:
         title: "Propostas"
         description: "Na seção %{link} você pode fazer propostas para a Prefeitura realizá-los. As propostas necessitam de apoio, e se alcançam o apoio suficiente, são colocadas em votação pública. As propostas aprovadas nestas votações pelos cidadãos são aceitas pela Prefeitura e realizadas."
         link: "propostas dos cidadãos"
-        feature_html: "Para criar uma proposta você deve se registrar em %{org}. As propostas que recebem o suporte no site de 1% das pessoas com direito de voto (%{supports} de pessoas de mais de 16 anos de idade registrados) vão para votação. Para apoiar as propostas, é necessário verificar a sua conta."
         image_alt: "Botão para apoiar uma proposta"
-        figcaption_html: 'Botão para "Apoiar" uma proposta. <br> Quando ela atingir o número de apoios irá para votação.'
+        figcaption_html: 'Botão para "apoiar" uma proposta.'
       budgets:
         title: "Orçamento participativo"
         description: "A seção %{link} auxilia às pessoas a decidirem diretamente qual o destino de uma parte do orçamento municipal."
         link: "orçamentos participativos"
-        feature: "Neste processo, todo ano as pessoas elaboram, apoiam e votam nos projetos. Os mais votados passam a ser financiados com o orçamento municipal."
-        phase_1_html: "Entre Janeiro e início de Março, pessoas registradas em %{org} podem <strong>present</strong>."
-        phase_2_html: "Em março, proponentes tem que reunir apoio, na forma de <strong>pré seleção</strong>."
-        phase_3_html: "Entre abril e o começo de maio, os peritos da <strong>Prefeitura</strong> vão classificar os projetos em ordem de mais ou menos apoiados e verificar se eles são viáveis."
-        phase_4_html: "Finalmente, entre Maio e Junho, todos os cidadãos podem <strong>votar</strong> projetos que lhes interessem mais."
-        phase_5_html: "A partir da aprovação dos orçamentos no ano seguinte, a Prefeitura começa a colocar em prática os projetos vencedores."
         image_alt: "Diferentes fases de um orçamento participativo"
         figcaption_html: 'Fases de "Apoio" e "Votação" dos orçamentos participativos.'
       polls:
@@ -47,14 +40,10 @@ pt-BR:
         link: "votações"
         feature_1: "Para participar da votação, você precisa %{link} e verificar sua conta."
         feature_1_link: "registrar em %{org_name}"
-        feature_2: "Todos os eleitores registrados com mais de 16 anos podem votar."
-        feature_3: "Os resultados de todos os votos são vinculativos para o governo municipal."
       processes:
         title: "Processos"
         description: "Na seção %{link}, os cidadãos participam da redação e modificação dos regulamentos que afetam a cidade e podem opinar sobre as políticas municipais em debates anteriores."
         link: "processos"
-        feature: "Para participar de um processo, você tem que %{sign_up} e verificar a página %{link} periodicamente para verificar quais normas e políticas estão sendo discutidas e consultadas."
-        sign_up: "inscrever-se em %{org}"
       faq:
         title: "Problemas técnicos?"
         description: "Leia o FAQ e resolva suas dúvidas."
@@ -62,31 +51,120 @@ pt-BR:
         page:
           title: "Perguntas frequentes"
           description: "Utilize essa página para resolver Perguntas Frequentes dos usuários do site."
-          faq_1_title: "Pergunta 1"
-          faq_1_description: "Este é um exemplo para a descrição da pergunta um."
       other:
         title: "Outras informações de interesse"
         how_to_use: "Use o %{org_name} em sua cidade"
       how_to_use:
         text: |-
           Use-o em seu governo local ou nos ajude a melhorá-lo, é software livre.
-          
+
           Este Portal do Governo Aberto usa o [CONSUL app] (https://github.com/consul/consul 'consul github') que é um software livre, com [licença AGPLv3] (http://www.gnu.org/licenses/ agpl-3.0.html 'AGPLv3 gnu'), que significa em palavras simples que qualquer um pode usar o código livremente, copiá-lo, vê-lo em detalhes, modificá-lo e redistribuí-lo ao mundo com as modificações que quiser (permitindo que outros façam o mesmo). Porque pensamos que a cultura é melhor e mais rica quando é liberada.
-          
+
           Se você é um programador, pode ver o código e nos ajudar a melhorá-lo no [CONSUL app](https://github.com/consul/consul 'consul github').
       titles:
         how_to_use: Use-o em seu governo local
-    privacy: Política de privacidade
+    privacy:
+      title: Política de privacidade
+      subtitle: "INFORMAÇÕES SOBRE PRIVACIDADE DE DADOS"
+    accessibility:
+      title: Acessibilidade
+      description: |-
+        Acessibilidade Web refere-se à possibilidade de acesso à web e seu conteúdo por todas as pessoas, independentemente de deficiências (físicas, intelectuais ou técnicas), ou dificuldades que derivem do contexto de uso (tecnológico ou ambiental).
+
+        Quando sites são projetados com acessibilidade em mente, todos os usuários podem acessar o conteúdo em igualdade de condições, por exemplo:
+      examples:
+        - Proporcionando um texto alternativo à imagens, para que usuários cegos ou com deficiências visuais usando leitores especiais possam acessar informações.
+        - Quando vídeos têm legendas, os utilizadores com dificuldades auditivas podem compreendê-los totalmente.
+        - Se os conteúdos estiverem escritos em uma linguagem simples e ilustrada, os usuários com problemas de aprendizagem serão capazes de entendê-los com maior facilidade.
+        - Se o usuário tem problemas motores, sendo difícil de usar o mouse, as alternativas com o teclado ajudam na navegação.
+      keyboard_shortcuts:
+        title: Atalhos de teclado
+        navigation_table:
+          description: Para ser capaz de navegar através deste site de forma acessível, um grupo de teclas de acesso rápido que reúne as principais seções de interesse geral em que o site é organizado foi programado.
+          caption: Atalhos de teclado para o menu de navegação
+          key_header: Chave
+          page_header: Página
+          rows:
+            - 
+              key_column: 0
+              page_column: Início
+            - 
+              key_column: 1
+              page_column: Debates
+            - 
+              key_column: 2
+              page_column: Propostas
+            - 
+              key_column: 3
+              page_column: Votos
+            - 
+              key_column: 4
+              page_column: Orçamentos participativos
+            - 
+              key_column: 5
+              page_column: Processos legislativos
+        browser_table:
+          description: "Dependendo do sistema operacional e do navegador usado, a combinação de teclas será a seguinte:"
+          caption: Combinação de teclas, depende do sistema operacional e navegador
+          browser_header: Navegador
+          key_header: Combinação de teclas
+          rows:
+            - 
+              browser_column: Explorer
+              key_column: ALT + atalho, em seguida, ENTER
+            - 
+              browser_column: Firefox
+              key_column: ALT + CAPS + atalho
+            - 
+              browser_column: Chrome
+              key_column: ALT + atalho (CTRL + ALT + atalhos para MAC)
+            - 
+              browser_column: Safari
+              key_column: ALT + atalho (CMD + atalho para MAC)
+            - 
+              browser_column: Opera
+              key_column: CAPS + ESC + atalho
+      textsize:
+        title: Tamanho do texto
+        browser_settings_table:
+          description: O design acessível deste site permite ao usuário escolher o tamanho do texto que lhe convém. Esta ação pode ser realizada de diferentes formas dependendo do navegador utilizado.
+          browser_header: Navegador
+          action_header: Ação a ser tomada
+          rows:
+            - 
+              browser_column: Explorer
+              action_column: Exibir > Tamanho do texto
+            - 
+              browser_column: Firefox
+              action_column: Exibir > Tamanho
+            - 
+              browser_column: Chrome
+              action_column: Configurações (ícone) > Opções > Avançado > Conteúdo Web > Tamanho do texto
+            - 
+              browser_column: Safari
+              action_column: Exibir > Aumentar Zoom / Diminuir Zoom
+            - 
+              browser_column: Opera
+              action_column: Exibir > escala
+        browser_shortcuts_table:
+          description: "Outra maneira de modificar o tamanho do texto é utilizar os atalhos de teclado definidos em navegadores, em especial a combinação de teclas:"
+          rows:
+            - 
+              shortcut_column: CTRL e + (CMD e + no MAC)
+              description_column: Aumenta o tamanho do texto
+            - 
+              shortcut_column: CTRL e - (CMD e - no MAC)
+              description_column: Diminui o tamanho do texto
+      compatibility:
+        title: Compatibilidade com padrões e design visual
+        description_html: 'Todas as páginas deste site estão de acordo com <strong> Diretrizes de Acessibilidade </strong> ou com os Princípios gerais de Design Acessível estabelecidos pelo grupo de trabalho <abbr title = "Web Accessibility Initiative" lang = "en"> WAI < / abbr > pertencentes a W3C.'
     titles:
-      accessibility: Acessibilidade
-      conditions: Termos de uso
       help: "O que é %{org}? -Participação cidadã"
-      privacy: Política de privacidade
     verify:
       code: Código que você recebeu na carta
       email: Email
-      info: 'Para verificar sua conta introduza seus dados de acesso:'
-      info_code: 'Agora introduza o código recebido na carta:'
+      info: "Para verificar sua conta introduza seus dados de acesso:"
+      info_code: "Agora introduza o código recebido na carta:"
       password: Senha
       submit: Verificar minha conta
       title: Verifique sua conta

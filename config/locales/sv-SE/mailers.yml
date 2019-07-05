@@ -1,41 +1,38 @@
 sv:
   mailers:
-    no_reply: "Det här meddelanden skickades från en e-postadress som inte accepterar svar."
+    no_reply: "Det går inte att svara till den här e-postadressen."
     comment:
       hi: Hej
-      new_comment_by_html: Det finns en ny kommentar från <b>%{commenter}</b>
+      new_comment_by_html: Det finns en ny kommentar från <strong>%{commenter}</strong>
       subject: Någon har kommenterat på ditt %{commentable}
       title: Ny kommentar
     config:
-      manage_email_subscriptions: För att sluta få e-postmeddelanden kan du ändra dina inställningar i
+      manage_email_subscriptions: För att sluta få e-postmeddelanden kan du ändra dina inställningar med
     email_verification:
       click_here_to_verify: den här länken
       instructions_2_html: Det här e-postmeddelandet är för att verifiera ditt konto med <b>%{document_type} %{document_number}</b>. Klicka inte på länken ovan om de inte tillhör dig.
-      instructions_html: Klicka på %{verification_link} för att slutföra verifieringen av ditt användarkonto för Open Government-portalen.
+      instructions_html: Du måste klicka på %{verification_link} för att slutföra verifieringen av ditt användarkonto.
       subject: Bekräfta din e-postadress
       thanks: Tack så mycket.
       title: Bekräfta kontot via länken nedan
     reply:
       hi: Hej
-      new_reply_by_html: Det finns ett nytt svar från <b>%{commenter}</b> till din kommentar på
+      new_reply_by_html: Det finns ett nytt svar från <strong>%{commenter}</strong> till din kommentar på
       subject: Någon har svarat på din kommentar
       title: Nytt svar på din kommentar
     unfeasible_spending_proposal:
       hi: "Kära användare,"
       new_html: "Med anledning av det ber vi dig att skapa ett <strong>nytt förslag</strong> som uppfyller kraven för den här processen. Du kan göra det med följande länk: %{url}."
-      new_href: "nytt investeringsprojekt"
-      reconsider_html: "Om du anser att det avvisade förslaget uppfyller kraven på ett investeringsförslag ber vi dig skriva till examples@consul.es inom 48 timmar och inkludera koden %{code} i meddelandets ämnesrad."
+      new_href: "nytt budgetförslag"
       sincerely: "Vänliga hälsningar"
-      signatory: "FÖRVALTNINGEN FÖR MEDBORGARDELTAGANDE"
       sorry: "Ledsen för besväret och vi återigen tack för din ovärderliga medverkan."
-      subject: "Ditt investeringsprojekt '%{code}' har markerats som ogenomförbart"
-      unfeasible_html: "Från kommunfullmäktige vill vi tacka för ditt deltagande i <strong>medborgarbudgeten</strong>. Tyvärr kommer ditt förslag <strong>'%{title}'</strong> att uteslutas från den här processen av följande anledning:"
+      subject: "Ditt budgetförslag '%{code}' har markerats som ej genomförbart"
     proposal_notification_digest:
-      info: "Här är de nya meddelanden från förslagslämnarna till de förslag som du stödjer på %{org_name}."
-      title: "Förslagsnotifikationer i %{org_name}"
+      info: "Här är de senaste aviseringarna från förslagslämnarna till de förslag som du stöder på %{org_name}."
+      title: "Aviseringar om förslag på %{org_name}"
       share: Dela förslaget
       comment: Kommentera förslaget
-      unsubscribe: "Gå till %{account} och avmarkera 'Få sammanfattningar av meddelanden om förslag', om du inte längre vill få meddelanden om förslag."
+      unsubscribe: "Gå till %{account} och avmarkera 'Få sammanfattningar av aviseringar om förslag', om du inte längre vill få aviseringar om förslag."
       unsubscribe_account: Mitt konto
     direct_message_for_receiver:
       subject: "Du har fått ett nytt meddelande"
@@ -47,46 +44,42 @@ sv:
       title_html: "Du har skickat ett meddelande till <strong>%{receiver}</strong> med innehållet:"
     user_invite:
       ignore: "Om du inte har begärt denna inbjudan oroa inte dig, du kan ignorera detta mail."
-      text: "Tack för att du registrerat dig på %{org}! Nu kan du snart vara med och skapa staden du vill ha! Fyll bara i det här formuläret:"
+      text: "Tack för att du registrerat dig på %{org}! Nu kan du snart vara med och delta, fyll bara i det här formuläret:"
       thanks: "Tack så mycket."
       title: "Välkommen till %{org}"
       button: Slutför registrering
       subject: "Inbjudan till %{org_name}"
     budget_investment_created:
-      subject: "Tack för att du skapade ett budgetförslag!"
-      title: "Tack för att du skapade ett budgetförslag!"
+      subject: "Tack för att du skapat ett budgetförslag!"
+      title: "Tack för att du skapat ett budgetförslag!"
       intro_html: "Hej <strong>%{author}</strong>,"
-      text_html: "Tack för att du skapat investeringen <strong>%{investment}</strong> för medborgarbudgeten <strong>%{budget}</strong>."
-      follow_html: "Vi vill informera dig om hur processen går, men du kan också följa på <strong>%{link}</strong>."
+      text_html: "Tack för att du skapat budgetförslaget <strong>%{investment}</strong> för medborgarbudgeten <strong>%{budget}</strong>."
+      follow_html: "Du kommer att få löpande information om hur processen går, och du kan också följa den på <strong>%{link}</strong>."
       follow_link: "Medborgarbudgetar"
       sincerely: "Vänliga hälsningar,"
-      signatory: "FÖRVALTNINGEN FÖR MEDBORGARDELTAGANDE"
       share: "Dela ditt projekt"
     budget_investment_unfeasible:
       hi: "Kära användare,"
-      new_html: "Med anledning av det ber vi dig att skapa en <strong>ny investering</strong> som uppfyller kraven för den här processen. Du kan göra det med följande länk: %{url}."
-      new_href: "nytt investeringsprojekt"
-      reconsider_html: "Om du anser att det avvisade förslaget uppfyller kraven på ett investeringsförslag ber vi dig skriva till examples@consul.es inom 48 timmar och inkludera koden %{code} i meddelandets ämnesrad."
+      new_html: "Med anledning av det ber vi dig att skapa ett <strong>nytt budgetförslag</strong> som uppfyller kraven för den här processen. Du kan göra det med följande länk: %{url}."
+      new_href: "nytt budgetförslag"
       sincerely: "Vänliga hälsningar"
-      signatory: "FÖRVALTNINGEN FÖR MEDBORGARDELTAGANDE"
-      sorry: "Ledsen för besväret och vi återigen tack för din ovärderliga medverkan."
-      subject: "Ditt investeringsprojekt '%{code}' har markerats som ogenomförbart"
-      unfeasible_html: "Från kommunfullmäktige vill vi tacka för ditt deltagande i <strong>medborgarbudgeten</strong>. Tyvärr kommer ditt förslag <strong>'%{title}'</strong> att uteslutas från den här processen av följande anledning:"
+      sorry: "Ledsen för besväret och tack för din ovärderliga medverkan."
+      subject: "Ditt budgetförslag '%{code}' har markerats som ej genomförbart"
     budget_investment_selected:
-      subject: "Ditt investeringsprojekt '%{code}' har valts"
+      subject: "Ditt budgetförslag '%{code}' har valts"
       hi: "Kära användare,"
-      selected_html: "Från kommunfullmäktige vill vi tacka för ditt deltagande i <strong>medborgarbudgeten</strong>. Ditt investeringsprojekt <strong>'%{title}'</strong> har gått vidare till den slutgiltiga omröstningen, som kommer att ske <strong>15 maj till 30 juni</strong>."
-      share: "Börja få röster, dela ditt investeringsprojekt på sociala nätverk. Att dela det är viktigt för att det blir verklighet."
-      share_button: "Dela ditt investeringsprojekt"
+      share: "Börja samla röster och dela i sociala medier för att ditt förslag ska kunna bli verklighet."
+      share_button: "Dela ditt budgetförslag"
       thanks: "Tack igen för att du deltar."
       sincerely: "Vänliga hälsningar"
-      signatory: "FÖRVALTNINGEN FÖR MEDBORGARDELTAGANDE"
     budget_investment_unselected:
-      subject: "Ditt investeringsprojekt '%{code}' har inte valts"
+      subject: "Ditt budgetförslag '%{code}' har inte valts"
       hi: "Kära användare,"
-      unselected_html: "Från kommunfullmäktige vill vi tacka för ditt deltagande i <strong>medborgarbudgeten</strong>. Tyvärr har ditt investeringsprojekt <strong>'%{title}'</strong> inte gått vidare till den slutgiltiga omröstningen."
-      participate_html: "Du kan fortfarande delta i den slutgiltiga omröstningen för investeringsprojekt från <strong>15 maj till 30 juni</strong>."
-      participate_url: "delta i slutomröstningen"
-      thanks: "Tack igen för att du deltar."
+      thanks: "Tack återigen för att du deltar."
       sincerely: "Vänliga hälsningar"
-      signatory: "FÖRVALTNINGEN FÖR MEDBORGARDELTAGANDE"
+    new_actions_notification_rake_created:
+      hi: "Hej %{name},"
+    new_actions_notification_rake_published:
+      hi: "Hej %{name},"
+    new_actions_notification_on_published:
+      text_2: "Varför 100?"

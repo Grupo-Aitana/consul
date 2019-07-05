@@ -1,4 +1,4 @@
-class Legislation::Proposal < ActiveRecord::Base
+class Legislation::Proposal < ApplicationRecord
   include ActsAsParanoidAliases
   include Flaggable
   include Taggable
@@ -11,17 +11,16 @@ class Legislation::Proposal < ActiveRecord::Base
   include Communitable
   include Documentable
   include Notifiable
+  include Imageable
+  include Randomizable
 
-  documentable max_documents_allowed: 3,
-               max_file_size: 3.megabytes,
-               accepted_content_types: [ "application/pdf" ]
   accepts_nested_attributes_for :documents, allow_destroy: true
 
   acts_as_votable
   acts_as_paranoid column: :hidden_at
 
-  belongs_to :process, class_name: 'Legislation::Process', foreign_key: 'legislation_process_id'
-  belongs_to :author, -> { with_hidden }, class_name: 'User', foreign_key: 'author_id'
+  belongs_to :process, class_name: "Legislation::Process", foreign_key: "legislation_process_id"
+  belongs_to :author, -> { with_hidden }, class_name: "User", foreign_key: "author_id"
   belongs_to :geozone
   has_many :comments, as: :commentable
 
@@ -44,22 +43,25 @@ class Legislation::Proposal < ActiveRecord::Base
   scope :sort_by_confidence_score, -> { reorder(confidence_score: :desc) }
   scope :sort_by_created_at,       -> { reorder(created_at: :desc) }
   scope :sort_by_most_commented,   -> { reorder(comments_count: :desc) }
-  scope :sort_by_random,           -> { reorder("RANDOM()") }
+  scope :sort_by_title,            -> { reorder(title: :asc) }
+  scope :sort_by_id,               -> { reorder(id: :asc) }
+  scope :sort_by_supports,         -> { reorder(cached_votes_score: :desc) }
   scope :sort_by_flags,            -> { order(flags_count: :desc, updated_at: :desc) }
   scope :last_week,                -> { where("proposals.created_at >= ?", 7.days.ago)}
+  scope :selected,                 -> { where(selected: true) }
+  scope :winners,                  -> { selected.sort_by_confidence_score }
 
   def to_param
     "#{id}-#{title}".parameterize
   end
 
   def searchable_values
-    { title              => 'A',
-      question           => 'B',
-      author.username    => 'B',
-      tag_list.join(' ') => 'B',
-      geozone.try(:name) => 'B',
-      summary            => 'C',
-      description        => 'D'}
+    { title              => "A",
+      author.username    => "B",
+      tag_list.join(" ") => "B",
+      geozone.try(:name) => "B",
+      summary            => "C",
+      description        => "D"}
   end
 
   def self.search(terms)
@@ -89,6 +91,10 @@ class Legislation::Proposal < ActiveRecord::Base
     cached_votes_total
   end
 
+  def votes_score
+    cached_votes_score
+  end
+
   def voters
     User.active.where(id: votes_for.voters)
   end
@@ -110,18 +116,15 @@ class Legislation::Proposal < ActiveRecord::Base
   end
 
   def code
-    "#{Setting['proposal_code_prefix']}-#{created_at.strftime('%Y-%m')}-#{id}"
+    "#{Setting["proposal_code_prefix"]}-#{created_at.strftime("%Y-%m")}-#{id}"
   end
 
   def after_commented
-    save # updates the hot_score because there is a before_save
+    save # update cache when it has a new comment
   end
 
   def calculate_hot_score
-    self.hot_score = ScoreCalculator.hot_score(created_at,
-                                               total_votes,
-                                               total_votes,
-                                               comments_count)
+    self.hot_score = ScoreCalculator.hot_score(self)
   end
 
   def calculate_confidence_score
@@ -129,11 +132,11 @@ class Legislation::Proposal < ActiveRecord::Base
   end
 
   def after_hide
-    tags.each{ |t| t.decrement_custom_counter_for('LegislationProposal') }
+    tags.each{ |t| t.decrement_custom_counter_for("LegislationProposal") }
   end
 
   def after_restore
-    tags.each{ |t| t.increment_custom_counter_for('LegislationProposal') }
+    tags.each{ |t| t.increment_custom_counter_for("LegislationProposal") }
   end
 
   protected

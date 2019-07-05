@@ -14,7 +14,7 @@ fr:
         publish_comment: Publier un commentaire
       form:
         phase_not_open: Cette phase n’est pas ouverte
-        login_to_comment: Il est nécessaire de %{signin} ou de %{signup} pour laisser un commentaire.
+        login_to_comment: Vous devez %{signin} ou %{signup} pour laisser un commentaire.
         signin: Se connecter
         signup: S'inscrire
       index:
@@ -52,17 +52,17 @@ fr:
         more_info: Plus d'information et de contexte
       proposals:
         empty_proposals: Il n’y a pas de propositions
+        filters:
+          winners: Sélectionné
       debate:
         empty_questions: Il n'y a pas de question
         participate: Participer au débat
       index:
-        filter: Filtrer
+        filter: Filtre
         filters:
           open: Processus ouverts
-          next: À venir
-          past: Passés
+          past: Passé
         no_open_processes: Il n'y a pas de processus ouverts
-        no_next_processes: Il n'y a pas de processus à venir
         no_past_processes: Il n'y a pas de processus passés
         section_header:
           icon_alt: Icône des processus législatifs
@@ -71,9 +71,6 @@ fr:
         section_footer:
           title: Aide sur les processus législatifs
           description: Participer aux débats et aux processus préalables à la création d’une ordonnance ou d'une décision municipale. Votre avis sera examiné par le conseil municipal.
-          help_text_1: "Dans les processus participatifs, la mairie offre à ses citoyens la possibilité de participer à l’élaboration et la modification de la réglementation touchant la ville et de pouvoir se prononcer sur certaines actions qu’elle entend mener."
-          help_text_2: "Les personnes inscrites au sein de %{org} peuvent contribuer à la consultation publique de nouveaux règlements, ordonnances et directives, entre autres choses. Vos commentaires sont analysés par la circonscription correspondante et pris en considération pour la rédaction finale des ordonnances."
-          help_text_3: "Le conseil municipal ouvre également des processus pour recevoir des contributions et des avis sur l'action de la mairie."
       phase_not_open:
         not_open: Cette phase n’est pas encore ouverte
       phase_empty:
@@ -83,10 +80,12 @@ fr:
         see_latest_comments_title: Commentaires sur le processus
       shared:
         key_dates: Dates-clés
+        homepage: Page d’accueil
         debate_dates: Débat
         draft_publication_date: Brouillon de publication
-        allegations_dates: Allégations
+        allegations_dates: Commentaires
         result_publication_date: Publication du résultat final
+        milestones_date: Suivent
         proposals_dates: Propositions
     questions:
       comments:
@@ -97,7 +96,7 @@ fr:
           leave_comment: Laisser une réponse
       question:
         comments:
-          zero: Aucun commentaire
+          zero: Aucun commentaires
           one: "%{count} commentaire"
           other: "%{count} commentaires"
         debate: Débat
@@ -123,4 +122,3 @@ fr:
       form:
         tags_label: "Catégories"
       not_verified: "Pour voter pour les propositions, %{verify_account}."
-      closed: "Ce processus a été fermé et ne peut pas recevoir de votes."

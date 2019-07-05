@@ -3,7 +3,7 @@ it:
     password_expired:
       expire_password: "Password scaduta"
       change_required: "La password è scaduta"
-      change_password: "Cambiare la password"
+      change_password: "Cambia la password"
       new_password: "Nuova password"
       updated: "Password aggiornata correttamente"
     confirmations:
@@ -16,7 +16,7 @@ it:
       invalid: "%{authentication_keys} o password non validi."
       locked: "Il tuo account è stato bloccato."
       last_attempt: "Hai sono un altro tentativo prima che il tuo account sia bloccato."
-      not_found_in_database: "%{authentication_keys} o password errata."
+      not_found_in_database: "%{authentication_keys} o password non validi."
       timeout: "La sessione è scaduta. Per favore accedi nuovamente per continuare."
       unauthenticated: "È necessario eseguire il log in o registrarsi per continuare."
       unconfirmed: "Per proseguire, per favore clicca sul link di conferma che ti abbiamo inviato via mail"
@@ -37,7 +37,7 @@ it:
       updated: "La password è stata cambiata con successo. Autenticazione effettuata."
       updated_not_active: "La password è stata cambiata con successo."
     registrations:
-      destroyed: "Arrivederci! Il tuo account è stato cancellato. Speriamo di rivederti presto. Come da tua richiesta, i dati personali inseriti come utente del sito facenti parte del file 'File', di responsabilità del 'Responsabile', sono stati cancellati secondo quanto previsto dall’articolo 16 della Ley Orgánica 15/1999 de Protección de Datos de Carácter Personal e dall’articolo 31 del relativo Reglamento de desarollo (RD 1720/2007)."
+      destroyed: "Arrivederci! Il tuo account è stato cancellato. Speriamo di rivederti presto."
       signed_up: "Benvenuto! Sei stato autenticato."
       signed_up_but_inactive: "La registrazione è avvenuta con successo, ma non è stato possibile eseguire il log in perché l’account non è ancora stato attivato."
       signed_up_but_locked: "La registrazione è avvenuta con successo, ma non è stato possibile eseguire il log in perché l’account è bloccato."
@@ -56,6 +56,7 @@ it:
     messages:
       already_confirmed: "Hai già eseguito questa verifica; per favore, prova ad eseguire il log in."
       confirmation_period_expired: "È necessario provvedere alla verifica entro %{period}; per favore, esegui nuovamente la richiesta."
+      expired: "è scaduto; per cortesia, ripeti la richiesta."
       not_found: "non reperibile."
       not_locked: "non è stato bloccato."
       not_saved:

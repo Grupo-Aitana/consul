@@ -9,7 +9,7 @@ nl:
         display_entries: <b>%{first}&nbsp;-&nbsp;%{last}</b> van <b>%{total}</b> %{entry_name} getoond
       one_page:
         display_entries:
-          zero: "%{entry_name} -- niet gevonden"
+          zero: "%{entry_name} niet gevonden"
           one: Er is <b>1</b> %{entry_name}
           other: Er zijn <b> %{count}</b> %{entry_name}
   views:
@@ -19,3 +19,4 @@ nl:
       last: Laatste
       next: Volgende
       previous: Vorige
+      truncate: "&hellip;"

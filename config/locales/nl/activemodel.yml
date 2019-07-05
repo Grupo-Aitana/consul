@@ -2,12 +2,12 @@ nl:
   activemodel:
     models:
       verification:
-        residence: "Woonplaats"
+        residence: "Adres"
         sms: "SMS"
     attributes:
       verification:
         residence:
-          document_type: "Documentsoort"
+          document_type: "Document soort"
           document_number: "Documentnummer (inclusief letters)"
           date_of_birth: "Geboortedatum"
           postal_code: "Postcode"

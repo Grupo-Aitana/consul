@@ -10,18 +10,21 @@ pt-BR:
       budget/investment:
         one: "Investimento"
         other: "Investimentos"
-      budget/investment/milestone:
+      milestone:
         one: "Marco"
         other: "Marcos"
+      milestone/status:
+        one: "Status de investimento"
+        other: "Status dos investimentos"
       comment:
-        one: "Comentário"
+        one: "Comentar"
         other: "Comentários"
       debate:
-        one: "Debate"
+        one: "Debater"
         other: "Debates"
       tag:
         one: "Marcação"
-        other: "Marcações"
+        other: "Marcação"
       user:
         one: "Usuário"
         other: "Usuários"
@@ -31,6 +34,12 @@ pt-BR:
       administrator:
         one: "Administrador"
         other: "Administradores"
+      valuator:
+        one: "Avaliador"
+        other: "Avaliadores"
+      valuator_group:
+        one: "Grupo de avaliação"
+        other: "Grupos de avaliação"
       manager:
         one: "Gerente"
         other: "Gerentes"
@@ -38,7 +47,7 @@ pt-BR:
         one: "Boletim informativo"
         other: "Boletins informativos"
       vote:
-        one: "Voto"
+        one: "Vote"
         other: "Votos"
       organization:
         one: "Organização"
@@ -52,6 +61,9 @@ pt-BR:
       proposal:
         one: "Proposta dos cidadãos"
         other: "Propostas dos cidadãos"
+      spending_proposal:
+        one: "Projeto de investimento"
+        other: "Projetos de investimento"
       site_customization/page:
         one: Página personalizada
         other: Páginas personalizadas
@@ -64,15 +76,15 @@ pt-BR:
       legislation/process:
         one: "Processo"
         other: "Processos"
+      legislation/proposal:
+        one: "Proposta"
+        other: "Propostas"
       legislation/draft_versions:
         one: "Versão preliminar"
         other: "Versões preliminares"
-      legislation/draft_texts:
-        one: "Esboço"
-        other: "Esboços"
       legislation/questions:
         one: "Questão"
-        other: "Questões"
+        other: "Perguntas"
       legislation/question_options:
         one: "Opção de pergunta"
         other: "Opções de pergunta"
@@ -91,6 +103,9 @@ pt-BR:
       poll:
         one: "Votação"
         other: "Votações"
+      proposal_notification:
+        one: "Notificação da proposta"
+        other: "Notificações de proposta"
     attributes:
       budget:
         name: "Nome"
@@ -113,15 +128,23 @@ pt-BR:
         organization_name: "Se você está propondo em nome de um coletivo / organização, ou em nome de mais pessoas, escreva seu nome"
         image: "Imagem descritiva da proposta"
         image_title: "Título da imagem"
-      budget/investment/milestone:
+      milestone:
+        status_id: "Status atual do investimento (opcional)"
         title: "Título"
+        description: "Descrição (opcional, se houver uma condição atribuída)"
         publication_date: "Data de publicação"
+      milestone/status:
+        name: "Nome"
+        description: "Descrição (opcional)"
+      progress_bar:
+        kind: "Tipo"
+        title: "Título"
       budget/heading:
-        name: "Título"
+        name: "Nome do título"
         price: "Preço"
         population: "População"
       comment:
-        body: "Comentário"
+        body: "Comentar"
         user: "Usuário"
       debate:
         author: "Autor"
@@ -141,7 +164,7 @@ pt-BR:
         password_confirmation: "Confirmação de senha"
         password: "Senha"
         current_password: "Senha atual"
-        phone_number: "Número de Telefone"
+        phone_number: "Números de telefone"
         official_position: "Cargo público"
         official_level: "Nível do cargo"
         redeemable_code: "Código de verificação recebido via e-mail"
@@ -149,6 +172,7 @@ pt-BR:
         name: "Nome da organização"
         responsible_name: "Pessoa responsável pelo grupo"
       spending_proposal:
+        administrator_id: "Administrador"
         association_name: "Nome da Associação"
         description: "Descrição"
         external_url: "Link para documentação adicional"
@@ -161,11 +185,17 @@ pt-BR:
         geozone_restricted: "Restrito por geozona"
         summary: "Resumo"
         description: "Descrição"
+      poll/translation:
+        name: "Nome"
+        summary: "Resumo"
+        description: "Descrição"
       poll/question:
         title: "Questão"
         summary: "Resumo"
         description: "Descrição"
         external_url: "Link para documentação adicional"
+      poll/question/translation:
+        title: "Questão"
       signature_sheet:
         signable_type: "Tipo Significável"
         signable_id: "Identificação Signável"
@@ -180,7 +210,11 @@ pt-BR:
         updated_at: Atualizado em
         more_info_flag: Mostrar na página de ajuda
         print_content_flag: Botão de conteúdo de impressão
-        locale: Língua
+        locale: Idioma
+      site_customization/page/translation:
+        title: Título
+        subtitle: Legenda
+        content: Conteúdo
       site_customization/image:
         name: Nome
         image: Imagem
@@ -190,29 +224,40 @@ pt-BR:
         body: Corpo
       legislation/process:
         title: Título do processo
+        summary: Resumo
         description: Descrição
         additional_info: Informação adicional
         start_date: Data de início
-        end_date: Data final
+        end_date: Data de término
         debate_start_date: Data de início do debate
         debate_end_date: Data final do debate
         draft_publication_date: Data de publicação do rascunho
         allegations_start_date: Data de início das alegações
         allegations_end_date: Data de conclusão das alegações
         result_publication_date: Data de publicação do resultado final
+      legislation/process/translation:
+        title: Título do processo
+        summary: Resumo
+        description: Descrição
+        additional_info: Informação adicional
+        milestones_summary: Resumo
       legislation/draft_version:
         title: Version title
         body: Texto
-        changelog: Alterar
+        changelog: Alterações
         status: Status
         final_version: Versão final
+      legislation/draft_version/translation:
+        title: Version title
+        body: Texto
+        changelog: Alterar
       legislation/question:
         title: Título
         question_options: Opções
       legislation/question_option:
         value: Valor
       legislation/annotation:
-        text: Comente
+        text: Comentar
       document:
         title: Título
         attachment: Anexo
@@ -220,7 +265,10 @@ pt-BR:
         title: Título
         attachment: Anexo
       poll/question/answer:
-        title: Responda
+        title: Resposta
+        description: Descrição
+      poll/question/answer/translation:
+        title: Resposta
         description: Descrição
       poll/question/answer/video:
         title: Título
@@ -230,6 +278,27 @@ pt-BR:
         subject: Assunto
         from: De
         body: Conteúdo do e-mail
+      admin_notification:
+        segment_recipient: Destinatários
+        title: Título
+        link: Link
+        body: Texto
+      admin_notification/translation:
+        title: Título
+        body: Texto
+      widget/card:
+        label: Protocolo (opcional)
+        title: Título
+        description: Descrição
+        link_text: Texto do link
+        link_url: Link da URL
+      widget/card/translation:
+        label: Protocolo (opcional)
+        title: Título
+        description: Descrição
+        link_text: Texto do link
+      widget/feed:
+        limit: Número de itens
     errors:
       models:
         user:
@@ -250,6 +319,10 @@ pt-BR:
               min_image_width: "Largura da imagem deve ser pelo menos %{required_min_width}px"
               min_image_height: "Altura da imagem deve ser pelo menos %{required_min_height}px"
         newsletter:
+          attributes:
+            segment_recipient:
+              invalid: "O segmento de destinatários do usuário é inválido"
+        admin_notification:
           attributes:
             segment_recipient:
               invalid: "O segmento de destinatários do usuário é inválido"
@@ -285,8 +358,8 @@ pt-BR:
         signature:
           attributes:
             document_number:
-              not_in_census: 'Não verificado pelo censo'
-              already_voted: 'Já votou esta proposta'
+              not_in_census: "Não verificado pelo censo"
+              already_voted: "Já votou esta proposta"
         site_customization/page:
           attributes:
             slug:
@@ -299,7 +372,7 @@ pt-BR:
         comment:
           attributes:
             valuation:
-              cannot_comment_valuation: 'Você não pode comentar uma avaliação'
+              cannot_comment_valuation: "Você não pode comentar uma avaliação"
       messages:
         record_invalid: "Validação falhou: %{errors}"
         restrict_dependent_destroy:

@@ -30,14 +30,18 @@ pt-BR:
         unselected: Ver investimentos não selecionados para a fase de votação
     phase:
       drafting: Rascunho (não visível ao público)
+      informing: Informação
       accepting: Aceite dos projetos
       reviewing: Revendo projetos
       selecting: Seleção dos projetos
       valuating: Avaliação dos projetos
       publishing_prices: Publicação dos preços dos projetos
+      balloting: Votação de projetos
+      reviewing_ballots: Revisão de voto
       finished: Orçamento final
     index:
       title: Orçamentos participativos
+      empty_budgets: Não há orçamentos.
       section_header:
         icon_alt: Ícone dos orçamentos participativos
         title: Orçamentos participativos
@@ -52,29 +56,28 @@ pt-BR:
       see_results: Exibir resultados
       section_footer:
         title: Ajuda com orçamentos participativos
-        description: Com os orçamentos participativos, os cidadãos decidem para quais dos projetos apresentados por seus vizinhos é destinada uma parte do orçamento municipal.
-        help_text_1: "Orçamentos participativos são processos em que os cidadãos decidem diretamente sobre parte do que é gasto no orçamento municipal. Qualquer pessoa registrada com mais de 16 anos pode propor um projeto de investimento que é pré-selecionado em fase de voto popular."
-        help_text_2: "Os projetos mais votados são avaliados e aprovados para uma votação final, na qual são decididas as ações a serem realizadas pela Prefeitura, uma vez aprovados os orçamentos municipais do próximo ano."
-        help_text_3: "A apresentação dos projetos de orçamento participativo ocorre a partir de janeiro e durante um período de um mês e meio. Para participar e fazer propostas para toda a cidade e/ou distritos, você deve se inscrever em %{org} e verificar sua conta."
-        help_text_4: "Para obter o maior número possível de apoios e votos, escolha um título descritivo e compreensível para o seu projeto. Então você terá um espaço para desenvolver a abordagem da sua proposta. Forneça todos os dados e explicações, incluindo documentos e imagens, para ajudar os outros participantes a entender melhor o que você está propondo."
+        description: Com os orçamentos participativos, os cidadãos decidem para quais dos projetos apresentados será destinada uma parte do orçamento municipal.
+      milestones: Marcos
     investments:
       form:
         tag_category_label: "Categorias"
         tags_instructions: "Marque esta proposta. Você pode escolher entre as categorias propostas ou adicionar a sua própria"
-        tags_label: Marcações
-        tags_placeholder: "Insira as marcações que você deseja usar, separadas por vírgulas (',')"
-        map_location: "Localização do mapa"
+        tags_label: Marcação
+        tags_placeholder: "Entre com as marcações que você deseja usar, separadas por vírgulas ('s\")"
+        map_location: "Localização no mapa"
         map_location_instructions: "Navegue no mapa até o local e fixe o marcador."
         map_remove_marker: "Remover o marcador do mapa"
         location: "Informações adicionais de localização"
+        map_skip_checkbox: "Esta proposta não tem uma localização concreta ou não a conheço."
       index:
         title: Orçamento participativo
         unfeasible: Projetos de investimento inviáveis
+        unfeasible_text: "As propostas devem atender a uma série de critérios (legalidade, concretude, ser de responsabilidade da cidade, não exceder o limite do orçamento) para serem declaradas viáveis e chegarem ao estágio de votação final. Todas as propostas que não atendem a esses critérios são marcadas como inviáveis e publicadas na lista a seguir, juntamente com seu relatório de inviabilidade."
         by_heading: "Projetos de investimento com escopo: %{heading}"
         search_form:
           button: Buscar
           placeholder: Buscar projetos de investimento...
-          title: Pesquisar
+          title: Buscar
         search_results_html:
           one: " contendo o termo <strong>'%{search_term}'</strong>"
           other: " contendo o termo <strong>'%{search_term}'</strong>"
@@ -104,11 +107,11 @@ pt-BR:
           price: por preço
       show:
         author_deleted: Usuário excluído
-        price_explanation: Explanação do preço
+        price_explanation: Explicação do preço
         unfeasibility_explanation: Explanação da inviabilidade
-        code_html: 'Código do projeto de investimento: <strong>%{code}</strong>'
-        location_html: 'Localização: <strong>%{location}</strong>'
-        organization_name_html: 'Proposta no nome de: <strong>%{name}</strong>'
+        code_html: "Código do projeto de investimento: <strong>%{code}</strong>"
+        location_html: "Localização: <strong>%{location}</strong>"
+        organization_name_html: "Proposta no nome de: <strong>%{name}</strong>"
         share: Compartilhar
         title: Projeto de investimento
         supports: Apoios
@@ -116,12 +119,14 @@ pt-BR:
         price: Preço
         comments_tab: Comentários
         milestones_tab: Marcos
-        no_milestones: Não possui marcos definidos
-        milestone_publication_date: "Publicado %{publication_date}"
         author: Autor
+        project_unfeasible_html: "Este projeto de investimento <strong>foi marcado como não viável</strong> e não vai à fase de votação."
+        project_selected_html: "Este projeto de investimento <strong>está selecionado</strong> para a fase de votação."
+        project_winner: "Projeto de investimento ganhando"
+        project_not_selected_html: "Este projeto de investimento <strong>não foi selecionado</strong> para a fase de votação."
       wrong_price_format: Apenas números inteiros
       investment:
-        add: Vote
+        add: Voto
         already_added: Você já adicionou este projeto de investimento
         already_supported: Você já apoiou esta proposta de investimento. Compartilhe!
         support_title: Apoiar este projeto
@@ -129,10 +134,10 @@ pt-BR:
           one: "Você pode somente apoiar investimentos no distrito de %{count}. Se você continuar, não poderá alterar a eleição de seu distrito. Tem certeza?"
           other: "Você pode somente apoiar investimentos no distrito de %{count}. Se você continuar, não poderá alterar a eleição de seu distrito. Tem certeza?"
         supports:
-          zero: Sem apoio
+          zero: Nenhum apoio
           one: 1 apoio
           other: "%{count} apoios"
-        give_support: Apoio
+        give_support: Apoiar
       header:
         check_ballot: Verificar minha cédula
         different_heading_assigned_html: "Você possui votos ativos em um título diferente: %{heading_link}"
@@ -156,7 +161,7 @@ pt-BR:
       heading: "Resultados do orçamento participativo"
       heading_selection_title: "Por distrito"
       spending_proposal: Título da proposta
-      ballot_lines_count: Tempos selecionados
+      ballot_lines_count: Votos
       hide_discarded_link: Esconder descartados
       show_all_link: Mostrar todos
       price: Preço
@@ -167,6 +172,9 @@ pt-BR:
       investment_proyects: Lista de todos os projetos de investimento
       unfeasible_investment_proyects: Lista de todos os projetos de investimento inviáveis
       not_selected_investment_proyects: Lista de todos os projetos de investimento não selecionados para votação
+    executions:
+      link: "Marcos"
+      heading_selection_title: "Por distrito"
     phases:
       errors:
         dates_range_invalid: "Data de início não pode ser igual ou posterior à data de término"

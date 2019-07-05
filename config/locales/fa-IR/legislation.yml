@@ -13,7 +13,7 @@ fa:
         cancel: لغو
         publish_comment: نشر نظر
       form:
-        phase_not_open: این فاز  باز نمی شود.
+        phase_not_open: این مرحله هنوز باز نشده است
         login_to_comment: برای نظر دادن شما باید %{signin} یا %{signup} کنید .
         signin: ورود به برنامه
         signup: ثبت نام
@@ -52,6 +52,8 @@ fa:
         more_info: کسب اطلاعات بیشتر و زمینه
       proposals:
         empty_proposals: پیشنهادی وجود ندارد
+        filters:
+          winners: انتخاب شده
       debate:
         empty_questions: هیچ سوالی وجود ندارد
         participate: مشارکت در بحث
@@ -59,10 +61,8 @@ fa:
         filter: فیلتر
         filters:
           open: فرآیندهای باز
-          next: بعدی
           past: گذشته
         no_open_processes: فرایندهای باز وجود ندارد
-        no_next_processes: فرایندها برنامه ریزی نشده است
         no_past_processes: فرآیندهای گذشته وجود ندارد
         section_header:
           icon_alt: آیکون قوانین پردازش 
@@ -71,9 +71,6 @@ fa:
         section_footer:
           title: کمک در مورد فرآیندهای قانونی
           description: قبل از تصویب یک حکم یا اقدام شهری، در بحث ها و پروسه ها شرکت کنید. نظر شما توسط شورای شهر در نظر گرفته می شود.
-          help_text_1: "در مراحل مشارکتی، شورای شهر شهروندان خود را به مشارکت در تهیه پیش نویس و اصلاح مقررات،تأثیرگذار بر شهر و توانایی دادن نظرات خود در خصوص اقداماتی که قصد دارد انجام دهد،ترغیب می کند."
-          help_text_2: "افرادی که در %{org}ثبت نام کرده اند می توانند با مشارکت در مشاغل عمومی از مقررات، مقررات و دستورالعمل های جدید شرکت کنند. نظرات شما توسط منطقه مربوطه مورد تجزیه و تحلیل قرار گرفته و برای تهیه پیش نویس دستورات در نظر گرفته می شود."
-          help_text_3: "شورای شهر همچنین فرآیندهایی را برای دریافت کمک و نظرات در مورد اقدامات شهری باز می کند."
       phase_not_open:
         not_open: این مرحله هنوز باز نشده است
       phase_empty:
@@ -83,9 +80,10 @@ fa:
         see_latest_comments_title: اظهار نظر در مورد این روند
       shared:
         key_dates: تاريخهاي مهم
+        homepage: صفحه اصلی
         debate_dates: بحث
         draft_publication_date: انتشار پیش نویس
-        allegations_dates: اتهامات
+        allegations_dates: توضیحات
         result_publication_date: انتشار نتیجه نهایی
         proposals_dates: طرح های پیشنهادی
     questions:
@@ -108,7 +106,7 @@ fa:
         share: "اشتراک گذاری\n"
         title: روند قانونی همکاری
       participation:
-        phase_not_open: این مرحله هنوز باز نشده است
+        phase_not_open: این فاز  باز نمی شود.
         organizations: سازمانها مجاز به شرکت در بحث نیستند
         signin: ورود به برنامه
         signup: ثبت نام
@@ -123,4 +121,3 @@ fa:
       form:
         tags_label: "دسته بندی ها\n"
       not_verified: "برای  رای به پیشنهادات%{verify_account}"
-      closed: "این فرآیند بسته شده است و نمی توانید رای بدهید."

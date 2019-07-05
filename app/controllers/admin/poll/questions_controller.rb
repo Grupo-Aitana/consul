@@ -1,11 +1,12 @@
 class Admin::Poll::QuestionsController < Admin::Poll::BaseController
   include CommentableActions
+  include Translatable
 
   load_and_authorize_resource :poll
-  load_and_authorize_resource :question, class: 'Poll::Question'
+  load_and_authorize_resource :question, class: "Poll::Question"
 
   def index
-    @polls = Poll.all
+    @polls = Poll.not_budget
     @search = search_params[:search]
 
     @questions = @questions.search(search_params).page(params[:page]).order("created_at DESC")
@@ -21,6 +22,7 @@ class Admin::Poll::QuestionsController < Admin::Poll::BaseController
 
   def create
     @question.author = @question.proposal.try(:author) || current_user
+    @question.votation_type = VotationType.build_by_type(@question, params[:votation_type])
 
     if @question.save
       redirect_to admin_question_path(@question)
@@ -52,14 +54,25 @@ class Admin::Poll::QuestionsController < Admin::Poll::BaseController
     redirect_to admin_questions_path, notice: notice
   end
 
+  def get_options_traductions
+    render json: {
+      traduction: t("polls.index.descriptions.#{VotationType.enum_types.key params[:enum_type].to_i}")
+    }
+  end
+
   private
 
     def question_params
-      params.require(:poll_question).permit(:poll_id, :title, :question, :proposal_id)
+      attributes = [:poll_id, :question, :proposal_id]
+      params.require(:poll_question).permit(*attributes, translation_params(Poll::Question),
+        :votation_type, :max_votes, :prioritization_type, :max_groups_answers)
     end
 
     def search_params
       params.permit(:poll_id, :search)
     end
 
+    def resource
+      @poll_question ||= Poll::Question.find(params[:id])
+    end
 end

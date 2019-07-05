@@ -13,44 +13,24 @@ id:
     votes_for_proposal_success: "Jumlah suara yang diperlukan untuk persetujuan Proposal"
     months_to_archive_proposals: "Bulan untuk arsip Proposal"
     email_domain_for_officials: "Email domain untuk pejabat publik"
-    per_page_code_head: "Kode untuk disertakan pada setiap halaman (<head>)"
-    per_page_code_body: "Kode untuk disertakan pada setiap halaman (<body>)"
     twitter_handle: "Twitter menangani"
     twitter_hashtag: "Hashtag Twitter"
     facebook_handle: "Facebook menangani"
     youtube_handle: "Youtube menangani"
     telegram_handle: "Telegram menangani"
     instagram_handle: "Instagram menangani"
-    blog_url: "Blog URL"
-    transparency_url: "Transparansi URL"
-    opendata_url: "Buka Data URL"
     url: "URL Utama"
     org_name: "Organisasi"
-    place_name: "Tempat"
-    feature:
-      budgets: Penganggaran partisipatif
-      twitter_login: Twitter masuk
-      facebook_login: Facebook masuk
-      google_login: Google masuk
-      proposals: Proposal
-      debates: Perdebatan
-      polls: Jajak pendapat
-      signature_sheets: Lembaran tanda tangan
-      spending_proposals: Proyek-proyek investasi
-      spending_proposal_features:
-        voting_allowed: Pemungutan suara pada proyek-proyek investasi
-      legislation: Undang-undang
-      community: Masyarakat pada proposal dan investasi
-      map: Proposal dan anggaran investasi
-      allow_images: Mengizinkan unggah dan tampilkan gambar
-    map_latitude: Garis lintang
-    map_longitude: Garis bujur
-    map_zoom: Zoom
-    mailer_from_name: Nama email asal
-    mailer_from_address: Alamat email asal
     meta_title: "Judul situs (SEO)"
     meta_description: "Deskripsi situs (SEO)"
     meta_keywords: "Kata kunci (SEO)"
-    verification_offices_url: Verifikasi kantor URL
     min_age_to_participate: Usia Minimum yang diperlukan untuk berpartisipasi
-    proposal_improvement_path: Usulan perbaikan info link internal
+    feature:
+      twitter_login: "Twitter masuk"
+      facebook_login: "Facebook masuk"
+      google_login: "Google masuk"
+      signature_sheets: "Lembaran tanda tangan"
+      spending_proposals: "Pengeluaran proposal"
+      community: "Masyarakat pada proposal dan investasi"
+      map: "Proposal dan anggaran investasi"
+      allow_images: "Mengizinkan unggah dan tampilkan gambar"

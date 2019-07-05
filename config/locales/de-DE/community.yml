@@ -3,34 +3,38 @@ de:
     sidebar:
       title: Community
       description:
-        proposal: Werden Sie ein Teil der Vorschlags-Community.
-        investment: Nehmen Sie teil in der Benutzer-Community zu dieser Investierung.
+        proposal: Beteiligen Sie sich in der Nutzergemeinde für diesen Vorschlag.
+        investment: Beteiligen Sie sich in der Nutzergemeinde dieser Investition.
       button_to_access: Treten Sie der Community bei
     show:
       title:
         proposal: Vorschlags-Community
-        investment: Budgetinvestitions-Community
+        investment: Budgetinvestitions-Gemeinschaft
       description:
-        proposal: Nehmen Sie teil an der Community zu diesem Vorschlag. Eine aktive Community kann helfen den Inhalt des Vorschlags zu verbessern und die Verbreitung des Vorschlags zu vergrößern um mehr Unterstützung zu bekommen.
-        investment: Nehmen Sie an der Community dieser Budgetinvestition teil. Eine aktive Community kann helfen den Inhalt der Budgetinvestition zu verbessern und die Verbreitung des Vorschlags zu vergrößern um mehr Unterstützung zu bekommen.
+        proposal: Beteiligen Sie sich an der Community dieses Antrags. Eine aktive Gemeinschaft kann dazu beitragen, den Inhalt des Vorschlags zu verbessern und seine Verbreitung zu fördern, um mehr Unterstützung zu erhalten.
+        investment: Beteiligen Sie sich an der Community dieser Budget-Investition. Eine aktive Gemeinschaft kann dazu beitragen, den Inhalt der Haushaltsinvestitionen zu verbessern und ihre Verbreitung zu fördern, um mehr Unterstützung zu erhalten.
       create_first_community_topic:
-        first_theme_not_logged_in: Es ist kein Anliegen verfügbar, beteiligen Sie sich das erste zu erstellen.
+        first_theme_not_logged_in: Es ist kein Anliegen verfügbar, beteiligen Sie sich, indem Sie das erste erstellen.
         first_theme: Erstellen Sie das erste Community-Thema
-        sub_first_theme: "Um ein Design zu erstellen, müssen Sie %{sign_in} o %{sign_up}."
-        sign_in: "Anmelden"
+        sub_first_theme: "Um ein Thema zu erstellen, müssen Sie %{sign_in} o %{sign_up}."
+        sign_in: "anmelden"
         sign_up: "registrieren"
       tab:
-        participants: Teilnehmer
+        participants: Teilnehmer*innen
       sidebar:
         participate: Teilnehmen
         new_topic: Thema erstellen
       topic:
         edit: Thema bearbeiten
+        destroy: Thema löschen
         comments:
           zero: Keine Kommentare
+          one: 1 Kommentar
+          other: "%{count} Kommentare"
       author: Autor
+      back: Zurück zu %{community} %{proposal}
     topic:
-      create: Thema erstellen
+      create: Ein Thema erstellen
       edit: Thema bearbeiten
       form:
         topic_title: Titel
@@ -48,8 +52,9 @@ de:
           comments_tab: Kommentare
       sidebar:
         recommendations_title: Empfehlungen zum Erstellen eines Themas
-        recommendation_one: Schreiben Sie den Themen-Titel oder ganze Sätze nicht in Großbuchstaben. Im Internet wird das als Geschrei betrachtet (und niemand wird gerne angeschrien).
+        recommendation_one: Schreiben Sie den Themen-Titel oder ganze Sätze nicht in Großbuchstaben. Im Internet wird dies als Geschrei betrachtet. Und niemand wird gerne angeschrien.
         recommendation_two: Themen oder Kommentare, die illegale Handlungen beinhalten, werden gelöscht. Auch diejenigen, die die Diskussionen absichtlich sabotieren. Alles andere ist erlaubt.
+        recommendation_three: Genießen Sie diesen Ort, die Stimmen, die ihn füllen, sind auch Ihre.
   topics:
     show:
       login_to_comment: Sie müssen sich %{signin} oder %{signup}, um einen Kommentar zu hinterlassen.

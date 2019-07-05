@@ -4,9 +4,9 @@ sv:
       new:
         email_label: E-post
         submit: Skicka instruktioner igen
-        title: Skicka om bekräftelse instruktioner
+        title: Skicka bekräftelseinstruktioner igen
       show:
-        instructions_html: Bekräftar kontot med e-postadress %{email}
+        instructions_html: Bekräftar kontot med e-postadressen %{email}
         new_password_confirmation_label: Upprepa ditt lösenord
         new_password_label: Nytt lösenord
         please_set_password: Ställ in ditt nya lösenord (för e-postadressen ovan)
@@ -15,22 +15,22 @@ sv:
     mailer:
       confirmation_instructions:
         confirm_link: Bekräfta mitt konto
-        text: 'Bekräfta din e-postadress med följande länk:'
-        title: Välkommen till portalen för öppen data
+        text: "Bekräfta din e-postadress med följande länk:"
+        title: Välkommen
         welcome: Välkommen
       reset_password_instructions:
-        change_link: Uppdatera mitt lösenord
+        change_link: Ändra mitt lösenord
         hello: Hej
         ignore_text: Ignorera det här meddelandet om du inte begärt ett nytt lösenord.
         info_text: Du behöver använda länken för att ändra ditt lösenord.
-        text: 'Vi har mottagit en begäran om att ändra ditt lösenord. Du kan göra det med följande länk:'
-        title: Uppdatera ditt lösenord
+        text: "Vi har mottagit en begäran om att ändra ditt lösenord. Du kan göra det med följande länk:"
+        title: Ändra ditt lösenord
       unlock_instructions:
         hello: Hej
         info_text: Ditt konto har blockerats på grund av ett alltför stort antal misslyckade inloggningsförsök.
-        instructions_text: 'Klicka på länken för att låsa upp ditt konto:'
+        instructions_text: "Klicka på länken för att låsa upp ditt konto:"
         title: Ditt konto har låsts
-        unlock_link: Låsa upp mitt konto
+        unlock_link: Lås upp mitt konto
     menu:
       login_items:
         login: Logga in
@@ -40,70 +40,70 @@ sv:
       registrations:
         new:
           email_label: E-post
-          organization_name_label: Organisationsnamn
+          organization_name_label: Organisationens namn
           password_confirmation_label: Bekräfta lösenord
           password_label: Lösenord
           phone_number_label: Telefonnummer
-          responsible_name_label: Fullständigt namn på personen som ansvarar för kollektivet
+          responsible_name_label: Fullständigt namn på personen som representerar gruppen
           responsible_name_note: Det här är en person som representerar organisationen/gruppen som står bakom förslagen
           submit: Registrera dig
-          title: Registrera som organisation eller kollektiv
+          title: Registrera er som organisation eller grupp
         success:
-          back_to_index: Jag förstår; gå tillbaka till hemsidan
+          back_to_index: Jag förstår; gå tillbaka till startsidan
           instructions_1_html: "<b>Vi kommer snart att kontakta dig</b> för att bekräfta att du representerar den här gruppen."
           instructions_2_html: Medan din <b>e-postadress granskas</b>, har vi skickat en <b>länk för att bekräfta ditt konto</b>.
           instructions_3_html: När bekräftelsen är klar kan du börja delta som en overifierad grupp.
           thank_you_html: Tack för att du har registrerat en grupp på webbplatsen. Den <b>inväntar nu granskning</b>.
-          title: Registrering av organisation / kollektiv
+          title: Registrering av organisation/grupp
     passwords:
       edit:
-        change_submit: Uppdatera mitt lösenord
-        password_confirmation_label: Bekräfta nytt lösenord
+        change_submit: Ändra mitt lösenord
+        password_confirmation_label: Bekräfta ditt nya lösenord
         password_label: Nytt lösenord
-        title: Uppdatera ditt lösenord
+        title: Ändra ditt lösenord
       new:
         email_label: E-post
         send_submit: Skicka instruktioner
-        title: Glömt ditt lösenord?
+        title: Har du glömt ditt lösenord?
     sessions:
       new:
         login_label: E-post eller användarnamn
         password_label: Lösenord
         remember_me: Kom ihåg mig
-        submit: Komma in
+        submit: Logga in
         title: Logga in
     shared:
       links:
-        login: Komma in
+        login: Logga in
         new_confirmation: Har du inte fått instruktioner för att aktivera ditt konto?
-        new_password: Glömt ditt lösenord?
-        new_unlock: Har du inte fått upplåsning instruktioner?
+        new_password: Har du glömt ditt lösenord?
+        new_unlock: Har du inte fått instruktioner för att låsa upp ditt konto?
         signin_with_provider: Logga in med %{provider}
         signup: Har du inte ett konto? %{signup_link}
-        signup_link: Registrera sig
+        signup_link: Registrera dig
     unlocks:
       new:
         email_label: E-post
-        submit: Skicka om upplåsning instruktioner
-        title: Skickade om upplåsning instruktioner
+        submit: Skicka instruktioner för att låsa upp konto igen
+        title: Har skickat instruktioner för att låsa upp konto
     users:
       registrations:
         delete_form:
-          erase_reason_label: Syfte
+          erase_reason_label: Anledning
           info: Åtgärden kan inte ångras. Kontrollera att detta är vad du vill.
-          info_reason: Om du vill kan du skriva en anledning (tillval)
-          submit: Radera mitt konto
+          info_reason: Om du vill kan du skriva en anledning (frivilligt fält)
+          submit: Ta bort mitt konto
           title: Radera konto
         edit:
           current_password_label: Nuvarande lösenord
           edit: Redigera
           email_label: E-post
-          leave_blank: Lämna tomt om du inte vill ändra
+          leave_blank: Lämna tomt om du inte vill ändra det
           need_current: Vi behöver ditt nuvarande lösenord för att bekräfta ändringarna
           password_confirmation_label: Bekräfta nytt lösenord
           password_label: Nytt lösenord
           update_submit: Uppdatera
-          waiting_for: 'Väntar på bekräftelse av:'
+          waiting_for: "Väntar på bekräftelse av:"
         new:
           cancel: Avbryt inloggning
           email_label: E-post
@@ -111,19 +111,19 @@ sv:
           organization_signup_link: Registrera dig här
           password_confirmation_label: Bekräfta lösenord
           password_label: Lösenord
-          redeemable_code: Bekräftelsekod via e-post (frivilligt)
+          redeemable_code: Bekräftelsekod via e-post (frivilligt fält)
           submit: Registrera dig
-          terms: Genom registrering godkänner du %{terms}
-          terms_link: regler och villkor för användning
+          terms: Genom att registrera dig godkänner du %{terms}
+          terms_link: användarvillkoren
           terms_title: Genom att registrera dig godkänner du användarvillkoren
           title: Registrera dig
-          username_is_available: Användarnamn tillgängligt
-          username_is_not_available: Användarnamn redan används
+          username_is_available: Användarnamnet är tillgängligt
+          username_is_not_available: Användarnamnet är upptaget
           username_label: Användarnamn
-          username_note: Namnet som visas bredvid dina inlägg
+          username_note: Namn som visas vid dina inlägg
         success:
-          back_to_index: Jag förstår; gå tillbaka till hemsidan
+          back_to_index: Jag förstår; gå tillbaka till startsidan
           instructions_1_html: <b>Kontrollera din e-postadress</b> - vi har skickat en <b>länk för att bekräfta ditt konto</b>.
-          instructions_2_html: När bekräftad kan du börja att delta.
+          instructions_2_html: När ditt konto är bekräftat kan du börja delta.
           thank_you_html: Tack för att du har registrerat dig. Nu behöver du <b>bekräfta din e-postadress</b>.
-          title: Ändra din e-postadress
+          title: Bekräfta din e-postadress

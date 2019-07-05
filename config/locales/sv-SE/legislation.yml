@@ -2,7 +2,7 @@ sv:
   legislation:
     annotations:
       comments:
-        see_all: Se alla
+        see_all: Visa alla
         see_complete: Visa förklaring
         comments_count:
           one: "%{count} kommentar"
@@ -11,16 +11,16 @@ sv:
           one: "%{count} svar"
           other: "%{count} svar"
         cancel: Avbryt
-        publish_comment: Publicera Commentar
+        publish_comment: Publicera kommentar
       form:
-        phase_not_open: Fasen är inte öppen
+        phase_not_open: Denna fas är inte öppen
         login_to_comment: Du behöver %{signin} eller %{signup} för att kunna kommentera.
         signin: Logga in
-        signup: Registrera sig
+        signup: Registrera dig
       index:
         title: Kommentarer
         comments_about: Kommentarer om
-        see_in_context: Se i sammanhang
+        see_in_context: Visa i sammanhang
         comments_count:
           one: "%{count} kommentar"
           other: "%{count} kommentarer"
@@ -28,21 +28,21 @@ sv:
         title: Kommentera
       version_chooser:
         seeing_version: Kommentarer för version
-        see_text: Se utkast
+        see_text: Visa utkast
     draft_versions:
       changes:
         title: Ändringar
         seeing_changelog_version: Sammanfattning av ändringar
-        see_text: Se utkast
+        see_text: Visa utkast
       show:
         loading_comments: Laddar kommentarer
         seeing_version: Du visar ett utkast
         select_draft_version: Välj utkast
-        select_version_submit: se
+        select_version_submit: visa
         updated_at: uppdaterad den %{date}
         see_changes: visa sammanfattning av ändringar
-        see_comments: Se alla kommentarer
-        text_toc: Index
+        see_comments: Visa alla kommentarer
+        text_toc: Innehållsförteckning
         text_body: Text
         text_comments: Kommentarer
     processes:
@@ -52,41 +52,40 @@ sv:
         more_info: Mer information
       proposals:
         empty_proposals: Det finns inga förslag
+        filters:
+          winners: Vald
       debate:
         empty_questions: Det finns inga frågor
-        participate: Delta i debatten
+        participate: Delta i diskussionen
       index:
-        filter: Filter
+        filter: Filtrera
         filters:
-          open: Öppna processer
-          next: Nästa
-          past: Tidigare
-        no_open_processes: Det finns inga öppna processer
-        no_next_processes: Inga planerade processer
+          open: Pågående processer
+          past: Avslutade
+        no_open_processes: Det finns inga pågående processer
         no_past_processes: Det finns inga avslutade processer
         section_header:
-          icon_alt: Ikon för lagstiftande process
-          title: Lagstiftningsprocesser
-          help: Hjälp med lagstiftande processer
+          icon_alt: Ikon för dialoger
+          title: Dialoger
+          help: Hjälp med dialoger
         section_footer:
-          title: Hjälp med lagstiftande processer
-          description: Delta i debatter och processer inför beslut i staden. Dina åsikter kommer att tas i beaktande av kommunfullmäktige.
-          help_text_1: "Kommunfullmäktige ger möjlighet för medborgare att diskutera och delta i utformandet av policies och förslag till beslut för staden."
-          help_text_2: "Alla som är registrerade på %{org} kan delta och bidra med synpunkter inför nya förslag och beslut för staden. Dina kommentarer analyseras av relevant förvaltning och tas i beaktande i utformandet av nya förslag."
-          help_text_3: "Kommunfullmäktige kan också starta processer för att få synpunkter på förslag."
+          title: Hjälp med dialoger
+          description: "Delta i diskussioner och processer inför beslut i staden. Dina åsikter kommer att tas i beaktande av kommunen.\n\nI dialoger får medborgarna möjlighet att diskutera och ge förslag inför olika typer av kommunala beslut.\n\nAlla som är skrivna i staden kan komma med synpunkter på nya regelverk, beslut och planer för staden. Dina kommentarer analyseras och tas i beaktande i besluten."
       phase_not_open:
         not_open: Fasen är inte öppen ännu
       phase_empty:
         empty: Inget har publicerats än
       process:
-        see_latest_comments: Se de senaste kommentarerna
-        see_latest_comments_title: Kommentera denna process
+        see_latest_comments: Visa de senaste kommentarerna
+        see_latest_comments_title: Kommentera till den här processen
       shared:
         key_dates: Viktiga datum
-        debate_dates: Debatt
-        draft_publication_date: Publiceringsdatum för utkast
-        allegations_dates: Påståenden
-        result_publication_date: Publiceringsdatum för resultat
+        homepage: Startsida
+        debate_dates: Debattera
+        draft_publication_date: Utkastet publiceras
+        allegations_dates: Kommentarer
+        result_publication_date: Resultatet publiceras
+        milestones_date: Följer
         proposals_dates: Förslag
     questions:
       comments:
@@ -94,26 +93,26 @@ sv:
         comments_title: Öppna svar
         comments_closed: Avslutad fas
         form:
-          leave_comment: Lämna ditt svar
+          leave_comment: Svara
       question:
         comments:
           zero: Inga kommentarer
           one: "%{count} kommentar"
           other: "%{count} kommentarer"
-        debate: Debatt
+        debate: Debattera
       show:
         answer_question: Skicka svar
         next_question: Nästa fråga
-        first_question: Först fråga
+        first_question: Första frågan
         share: Dela
-        title: Kollaborativ lagstiftningsprocess
+        title: Medborgardialoger
       participation:
-        phase_not_open: Denna fas är inte öppen
+        phase_not_open: Fasen är inte öppen
         organizations: Organisationer får inte delta i debatten
         signin: Logga in
-        signup: Registrera sig
+        signup: Registrera dig
         unauthenticated: Du behöver %{signin} eller %{signup} för att kunna delta.
-        verified_only: Endast verifierade användare kan delta %{verify_account}.
+        verified_only: Endast verifierade användare kan delta, %{verify_account}.
         verify_account: verifiera ditt konto
         debate_phase_not_open: Diskussionsfasen har avslutats, och svar kan inte längre tas emot
     shared:
@@ -123,4 +122,3 @@ sv:
       form:
         tags_label: "Kategorier"
       not_verified: "Rösta på förslag %{verify_account}."
-      closed: "Processen är stängd och går inte att rösta på."

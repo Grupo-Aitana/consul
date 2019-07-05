@@ -37,7 +37,6 @@ id:
       updated: "Kata sandi anda telah berhasil diubah. Otentikasi berhasil."
       updated_not_active: "Kata sandi anda telah berhasil diubah."
     registrations:
-      destroyed: "Selamat tinggal! Akun anda telah dibatalkan kami harap ulasan ini dapat membantu anda merencanakan perjalanan. Sesuai dengan permintaan anda, data pribadi yang terdaftar sebagai pengguna situs dan merupakan bagian dari berkas 'Berkas’ di bawah tanggung jawab 'Bertanggung Jawab', mereka telah dibatalkan berdasarkan ketentuan dalam ketentuan Pasal 16 Ley Orgánica 15/1999 de Protección de Datos de Carácter Pribadi dan Pasal 31 dari Reglamento de desarrollo (RD 1720/2007)."
       signed_up: "Selamat datang! Anda telah dikonfirmasi."
       signed_up_but_inactive: "Pendaftaran anda telas berhasil, namun anda tidak dapat masuk karena akun anda belum diaktifkan."
       signed_up_but_locked: "Pendaftaran anda telah berhasil, namun anda tidak dapat masuk karena akun anda terkunci."

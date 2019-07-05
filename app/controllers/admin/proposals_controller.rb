@@ -1,33 +1,42 @@
 class Admin::ProposalsController < Admin::BaseController
+  include HasOrders
+  include CommentableActions
   include FeatureFlags
-
-  has_filters %w{without_confirmed_hide all with_confirmed_hide}, only: :index
-
   feature_flag :proposals
+  helper DownloadSettingsHelper
 
-  before_action :load_proposal, only: [:confirm_hide, :restore]
+  has_orders %w[created_at]
 
-  def index
-    @proposals = Proposal.only_hidden.send(@current_filter).order(hidden_at: :desc)
-                         .page(params[:page])
+  before_action :load_proposal, except: :index
+
+  def show
   end
 
-  def confirm_hide
-    @proposal.confirm_hide
-    redirect_to request.query_parameters.merge(action: :index)
+  def update
+    if @proposal.update(proposal_params)
+      redirect_to admin_proposal_path(@proposal), notice: t("admin.proposals.update.notice")
+    else
+      render :show
+    end
   end
 
-  def restore
-    @proposal.restore
-    @proposal.ignore_flag
-    Activity.log(current_user, :restore, @proposal)
-    redirect_to request.query_parameters.merge(action: :index)
+  def toggle_selection
+    @proposal.toggle :selected
+    @proposal.save!
   end
 
   private
 
+    def resource_model
+      Proposal
+    end
+
     def load_proposal
-      @proposal = Proposal.with_hidden.find(params[:id])
+      @proposal = Proposal.find(params[:id])
+    end
+
+    def proposal_params
+      params.require(:proposal).permit(:selected)
     end
 
 end

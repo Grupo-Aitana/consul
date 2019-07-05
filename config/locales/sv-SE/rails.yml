@@ -32,8 +32,8 @@ sv:
       - lördag
     formats:
       default: "%Y-%m-%d"
-      long: "%B %d, %Y"
-      short: "%b %d"
+      long: "%d %B, %Y"
+      short: "%d %b"
     month_names:
       - 
       - januari
@@ -48,10 +48,6 @@ sv:
       - oktober
       - november
       - december
-    order:
-      - :year
-      - :month
-      - :day
   datetime:
     distance_in_words:
       about_x_hours:
@@ -108,14 +104,14 @@ sv:
       empty: får inte lämnas tomt
       equal_to: måste vara lika med %{count}
       even: måste vara ett jämnt tal
-      exclusion: är reserverat
+      exclusion: är upptaget
       greater_than: måste vara större än %{count}
       greater_than_or_equal_to: måste vara större än eller lika med %{count}
       inclusion: finns inte i listan
       invalid: är ogiltigt
       less_than: måste vara mindre än %{count}
       less_than_or_equal_to: måste vara mindre än eller lika med %{count}
-      model_invalid: "Kontrollfel: %{errors}"
+      model_invalid: "Felmeddelanden: %{errors}"
       not_a_number: är inte ett nummer
       not_an_integer: måste vara ett heltal
       odd: måste vara ett udda tal
@@ -132,7 +128,7 @@ sv:
         other: är fel längd (måste vara %{count} tecken långt)
       other_than: får inte vara %{count}
     template:
-      body: 'Det finns problem med följande fält:'
+      body: "Det finns problem med följande fält:"
       header:
         one: ett fel hindrade den här %{model} att sparas
         other: "%{count} fel hindrade den här %{model} att sparas"
@@ -147,7 +143,7 @@ sv:
     currency:
       format:
         delimiter: " "
-        format: "%u %n"
+        format: "%n %u"
         precision: 2
         separator: ","
         significant: false
@@ -195,7 +191,7 @@ sv:
     formats:
       datetime: "%Y-%m-%d %H:%M:%S"
       default: "%a %d %b %Y %H:%M:%S %z"
-      long: "%B %d, %Y %H:%M"
+      long: "%d %B %Y, %H:%M"
       short: "%d %b %H:%M"
       api: "%Y-%m-%d %H"
     pm: på eftermiddagen

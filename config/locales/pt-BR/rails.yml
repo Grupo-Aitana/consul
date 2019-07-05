@@ -14,7 +14,7 @@ pt-BR:
       - Fev
       - Mar
       - Abr
-      - Mai
+      - Maio
       - Jun
       - Jul
       - Ago
@@ -40,7 +40,7 @@ pt-BR:
       - Fevereiro
       - Março
       - Abril
-      - Maio
+      - Mai
       - Junho
       - Julho
       - Agosto
@@ -48,10 +48,6 @@ pt-BR:
       - Outubro
       - Novembro
       - Dezembro
-    order:
-      - :ano
-      - ':mês'
-      - :dia
   datetime:
     distance_in_words:
       about_x_hours:
@@ -132,7 +128,7 @@ pt-BR:
         other: comprimento errado (deve ter %{count} caracteres)
       other_than: deve ser maior que %{count}
     template:
-      body: 'Houve problemas com os seguintes campos:'
+      body: "Houve problemas com os seguintes campos:"
       header:
         one: 1 erro impediu este %{model} de ser salvo
         other: "%{count} erro impediu este %{model} de ser salvo"

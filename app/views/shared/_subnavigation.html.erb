@@ -6,7 +6,7 @@
       <li>
         <%= layout_menu_link_to t("layouts.header.debates"),
                                 debates_path,
-                                controller_name == 'debates',
+                                controller_name == "debates",
                                 accesskey: "1",
                                 title: t("shared.go_to_page") + t("layouts.header.debates") %>
       </li>
@@ -37,14 +37,6 @@
                                 accesskey: "4" %>
       </li>
     <% end %>
-    <% if feature?(:spending_proposals) %>
-      <li>
-        <%= layout_menu_link_to t("layouts.header.spending_proposals"),
-                                  spending_proposals_path,
-                                  controller_name == 'spending_proposals',
-                                  accesskey: "s" %>
-      </li>
-    <% end %>
     <% if feature?(:budgets) %>
       <li>
         <%= layout_menu_link_to t("layouts.header.budgets"),
@@ -54,14 +46,16 @@
                                   title: t("shared.go_to_page") + t("layouts.header.budgets") %>
       </li>
     <% end %>
-    <li>
-      <%= link_to t("layouts.header.help"),
-                    help_path,
-                    accesskey: "6",
-                    class: ("is-active" if current_page?(help_path)),
-                    title: t("shared.go_to_page") + t("layouts.header.help") %>
-    </li>
-    
+    <% if feature?(:help_page) %>
+      <li>
+        <%= layout_menu_link_to t("layouts.header.help"),
+                                help_path,
+                                current_page?(help_path),
+                                accesskey: "6",
+                                title: t("shared.go_to_page") + t("layouts.header.help") %>
+      </li>
+    <% end %>
+
     <%= raw content_block("subnavigation_right", I18n.locale) %>
   </ul>
 </div>

@@ -16,6 +16,7 @@ ca:
       invalid: "%{authentication_keys} o contrasenya invàlids."
       locked: "El teu compte ha sigut bloquejat."
       last_attempt: "Tens un últim intent abans que el teu compte siga bloquejat."
+      not_found_in_database: "%{authentication_keys} o contrasenya invàlids."
       timeout: "La teua sessió ha expirat, per favor inicia sessió novament per a continuar."
       unauthenticated: "Necessites iniciar sessió o registrar-te per a continuar."
       unconfirmed: "Per a continuar, per favor prem en l'enllaç de confirmació que hem enviat al teu compte de correu."
@@ -36,7 +37,6 @@ ca:
       updated: "La teua contrasenya ha canviat correctament. Has sigut identificat correctament."
       updated_not_active: "La teua contrasenya s'ha canviat correctament."
     registrations:
-      destroyed: "Adéu! El teu compte ha sigut cancel·lat. Esperem tornar a veure't prompte. Li informem que de conformitat amb la seua petició, les seues dades personals registrades com a usuari de la Web i que formen part del fitxer 'DADES PERSONALS WEB' el responsable de la qual és l'Ajuntament de Castelló de la Plana, han sigut cancel·lats en els termes del previst en l'article 16 de la Llei Orgànica 15/1999 de Protecció de Dades de Caràcter Personal i de l'article 31 del seu Reglament de desenvolupament (RD 1720/2007)."
       signed_up: "Benvingut! Has sigut identificat."
       signed_up_but_inactive: "Te has registrado correctamente, pero no has podido iniciar sesión porque tu cuenta no ha sido activada."
       signed_up_but_locked: "T'has registrat correctament, però no has pogut iniciar sessió perquè el teu compte està bloquejat."
@@ -46,6 +46,7 @@ ca:
     sessions:
       signed_in: "Has iniciat sessió correctament."
       signed_out: "Has tancat la sessió correctament."
+      already_signed_out: "Has tancat la sessió correctament."
     unlocks:
       send_instructions: "Rebràs un correu electrònic en uns minuts amb instruccions sobre com desbloquejar el teu compte."
       send_paranoid_instructions: "Si el teu compte existeix, rebràs un correu electrònic en uns minuts amb instruccions sobre com desbloquejar el teu compte."

@@ -13,7 +13,7 @@ fa:
         voted_info_html: "شما می توانید رای خود را در هر زمان تا پایان این مرحله تغییر دهید. <br> بدون نیاز به صرف تمام پول در دسترس."
         zero: شما به پروژه سرمایه گذاری رای نداده اید
       reasons_for_not_balloting:
-        not_logged_in: شما باید %{signin} یا %{signup} کنید برای نظر دادن.
+        not_logged_in: شما باید %{signin} یا %{signup} کنید برای ادامه دادن.
         not_verified: فقط کاربران تأییدشده می توانند در مورد سرمایه گذاری رای دهند%{verify_account}
         organization: سازمان ها مجاز به رای دادن نیستند
         not_selected: پروژه های سرمایه گذاری انتخاب نشده پشتیبانی نمی شود
@@ -30,6 +30,7 @@ fa:
         unselected: دیدن سرمایه گذاری هایی که برای مرحله رای گیری انتخاب نشده اند
     phase:
       drafting: پیش نویس ( غیرقابل مشاهده برای عموم)
+      informing: اطلاعات
       accepting: پذیرش پروژه
       reviewing: بررسی پروژه ها
       selecting: پذیرش پروژه
@@ -53,11 +54,7 @@ fa:
       see_results: مشاهده نتایج
       section_footer:
         title: کمک در مورد بودجه مشارکتی
-        description: شهروندان با استفاده از بودجه مشارکتی تصمیم می گیرند کدام پروژه ها توسط همسایگان تعیین می شود و بخشی از بودجه شهرداری است.
-        help_text_1: "بودجه مشارکتی فرآیندی است که شهروندان به طور مستقیم بر آنچه که بخشی از بودجه شهرداری را صرف می کنند، تصمیم می گیرند. هر شخص ثبت شده بیش از 16 ساله می تواند یک پروژه سرمایه گذاری را پیش بینی کند که در مرحله پشتیبانی از شهروندان است."
-        help_text_2: "بیشتر پروژه های رای گیری شده مورد ارزیابی قرار می گیرند و به رأی نهایی منتقل می شوند که در آن تصمیم می گیرند اقدامات انجام شده توسط شورای شهر پس از تصویب بودجه شهرداری سال آینده تصویب شود."
-        help_text_3: "ارائه پروژه های بودجوی مشارکتی از ماه ژانویه و مدت یک و نیم ماه صورت می گیرد. برای شرکت و ارائه پیشنهادهای کل شهر و / یا مناطق، باید در%{org}ثبت نام کنید و حساب خود را تأیید کنید."
-        help_text_4: "برای دریافت هرچه بیشتر پشتیبانی و رای در صورت امکان، یک عنوان توصیفی و قابل درک برای پروژه خود را انتخاب کنید. سپس شما فضای لازم برای توسعه رویکرد پیشنهاد خود را دارید. ارائه اطلاعات و توضیحات، و حتی اسناد و تصاویر، برای کمک به دیگر شرکت کنندگان برای درک بهتر آنچه که شما پیشنهاد می کنید."
+      milestones: نقطه عطف
     investments:
       form:
         tag_category_label: "دسته بندی ها\n"
@@ -88,7 +85,7 @@ fa:
             other: "<strong>شما %{count} پیشنهاد را با هزینه یک رأی دادید%{amount_spent}</strong>"
           voted_info: شما می توانید%{link} در هر زمانی  این مرحله را پایان دهید . بدون نیاز به صرف تمام پول در دسترس.
           voted_info_link: تغییر رای خود 
-          different_heading_assigned_html: "شما در ردیف دیگری آراء فعال دارید:%{heading_link}"
+          different_heading_assigned_html: "شما قبلا یک عنوان متفاوت را رأی داده اید: %{heading_link}"
           change_ballot: "اگر نظر شما تغییر کند، می توانید رای خود را در%{check_ballot} حذف کنید و دوباره شروع کنید."
           check_ballot_link: "رای من را چک کن"
           zero: شما به هیچ پروژه سرمایه گذاری در این گروه رأی نداده اید.
@@ -109,9 +106,9 @@ fa:
         author_deleted: کاربر حذف شد
         price_explanation: توضیح قیمت
         unfeasibility_explanation: توضیح امکان سنجی 
-        code_html: 'کد پروژه سرمایه گذاری:<strong>%{code}</strong>'
+        code_html: "کد پروژه سرمایه گذاری:<strong>%{code}</strong>"
         location_html: "محل:\n%{location}</strong>"
-        organization_name_html: 'پیشنهاد از طرف:<strong>%{name}</strong>'
+        organization_name_html: "پیشنهاد از طرف:<strong>%{name}</strong>"
         share: "اشتراک گذاری\n"
         title: پروژه سرمایه گذاری
         supports: پشتیبانی ها
@@ -119,11 +116,9 @@ fa:
         price: قیمت
         comments_tab: توضیحات
         milestones_tab: نقطه عطف
-        no_milestones: نقاط قوت را مشخص نکرده اید
-        milestone_publication_date: "منتشر شده\n%{publication_date}"
         author: نویسنده
-        project_unfeasible_html: 'این پروژه سرمایه گذاری <strong> به عنوان غیرقابل توصیف مشخص شده است </ strong> و به مرحله رای گیری نرسیده است'
-        project_not_selected_html: 'این پروژه سرمایه گذاری <strong> انتخاب نشده است </ strong> برای مرحله رای گیری .'
+        project_unfeasible_html: "این پروژه سرمایه گذاری <strong> به عنوان غیرقابل توصیف مشخص شده است </ strong> و به مرحله رای گیری نرسیده است"
+        project_not_selected_html: "این پروژه سرمایه گذاری <strong> انتخاب نشده است </ strong> برای مرحله رای گیری ."
       wrong_price_format: فقط اعداد صحیح 
       investment:
         add: رای
@@ -140,7 +135,7 @@ fa:
         give_support: پشتیبانی
       header:
         check_ballot: رای من را چک کن
-        different_heading_assigned_html: "شما قبلا یک عنوان متفاوت را رأی داده اید: %{heading_link}"
+        different_heading_assigned_html: "شما در ردیف دیگری آراء فعال دارید:%{heading_link}"
         change_ballot: "اگر نظر شما تغییر کند، می توانید رای خود را در%{check_ballot} حذف کنید و دوباره شروع کنید."
         check_ballot_link: "رای من را چک کن"
         price: "این عنوان یک بودجه دارد"
@@ -161,7 +156,7 @@ fa:
       heading: "نتایج بودجه مشارکتی"
       heading_selection_title: "توسط منطقه"
       spending_proposal: عنوان پیشنهاد
-      ballot_lines_count: زمان انتخاب شده است
+      ballot_lines_count: آرا
       hide_discarded_link: پنهان کردن 
       show_all_link: نمایش همه
       price: قیمت
@@ -172,6 +167,9 @@ fa:
       investment_proyects: لیست تمام پروژه های سرمایه گذاری
       unfeasible_investment_proyects: لیست پروژه های سرمایه گذاری غیرقابل پیش بینی
       not_selected_investment_proyects: فهرست همه پروژه های سرمایه گذاری که برای رای گیری انتخاب نشده اند
+    executions:
+      link: "نقطه عطف"
+      heading_selection_title: "توسط منطقه"
     phases:
       errors:
         dates_range_invalid: "تاریخ شروع نمی تواند برابر یا بعد از تاریخ پایان باشد"

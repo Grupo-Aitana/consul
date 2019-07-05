@@ -29,6 +29,7 @@ val:
         budget_investment: "Proposta d'inversió actualitzada correctament."
         topic: "Tema actualitzat correctament."
         valuator_group: "Grup d'avaluadors actualitzat correctament"
+        translation: "Traducció actualitzada amb èxit"
       destroy:
         spending_proposal: "Proposta d'inversió eliminada."
         budget_investment: "Proposta d'inversió eliminada correctament."

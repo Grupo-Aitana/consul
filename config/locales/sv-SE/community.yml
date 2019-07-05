@@ -3,58 +3,58 @@ sv:
     sidebar:
       title: Gemenskap
       description:
-        proposal: Delta i gemenskapen kring detta förslag.
-        investment: Delta i gemenskapen kring denna investering.
+        proposal: Delta i gemenskapen kring förslaget.
+        investment: Delta i gemenskapen kring budgetförslaget.
       button_to_access: Gå med i gemenskapen
     show:
       title:
         proposal: Gemenskap kring förslaget
-        investment: Gemenskap kring investeringen
+        investment: Gemenskap kring budgetförslaget
       description:
-        proposal: Delta i gemenskapen kring förslaget. En aktiv gemenskap kan förbättra innehållet i förslaget, göra det mer känt och öka dess stöd.
-        investment: Delta i gemenskapen kring investeringen. En aktiv gemenskap kan förbättra innehållet i investeringen, göra det mer känt och öka dess stöd.
+        proposal: Delta i gemenskapen för att utveckla förslaget. En aktiv diskussion kan leda till förbättringar av förslaget, ge det större spridning och ökat stöd.
+        investment: Delta i gemenskapen för att utveckla budgetförslaget. En aktiv diskussion kan leda till förbättringar av förslaget, ge det större spridning och ökat stöd.
       create_first_community_topic:
-        first_theme_not_logged_in: Inga ämnen finns tillgängliga, skapa det första.
-        first_theme: Skapa det första ämnet i gemenskapen
+        first_theme_not_logged_in: Inga inlägg finns tillgängliga, skapa det första.
+        first_theme: Skapa det första inlägget i gemenskapen
         sub_first_theme: "För att skapa ett tema behöver du %{sign_in} eller %{sign_up}."
         sign_in: "logga in"
-        sign_up: "registrera sig"
+        sign_up: "registrera dig"
       tab:
         participants: Deltagare
       sidebar:
         participate: Delta
         new_topic: Skapa ämne
       topic:
-        edit: Redigera ämne
+        edit: Redigera inlägg
         destroy: Ta bort ämne
         comments:
           zero: Inga kommentarer
           one: 1 kommentar
           other: "%{count} kommentarer"
-      author: Författare
+      author: Skribent
       back: Tillbaka till %{community} %{proposal}
     topic:
-      create: Skapa ett ämne
-      edit: Redigera ämne
+      create: Skapa ett inlägg
+      edit: Redigera inlägg
       form:
         topic_title: Titel
         topic_text: Inledande text
         new:
-          submit_button: Skapa ämne
+          submit_button: Skapa inlägg
         edit:
-          submit_button: Redigera ämne
+          submit_button: Redigera inlägg
         create:
-          submit_button: Skapa ämne
+          submit_button: Skapa inlägg
         update:
-          submit_button: Uppdatera ämne
+          submit_button: Uppdatera inlägg
       show:
         tab:
           comments_tab: Kommentarer
       sidebar:
-        recommendations_title: Rekommendationer om att skapa ett ämne
-        recommendation_one: Skriv inte ämnets titel eller hela meningar med stora bokstäver. På nätet ses det som att skrika. Det är ingen som gillar att man skriker åt dem.
-        recommendation_two: Alla ämnen eller kommentarer som innebär en olaglig åtgärd kommer att tas bort, liksom de som saboterar ämnet. Allt annat är tillåtet.
-        recommendation_three: Platsen är din med - du ska kunna trivas och göra dig hörd här.
+        recommendations_title: Rekommendationer för att skapa inlägg
+        recommendation_one: Använd inte versaler i inläggets titel eller i hela meningar i beskrivningen. På internet betyder det att skrika, och ingen gillar när folk skriker på dem.
+        recommendation_two: Inlägg eller kommentarer som förespråkar olagliga handlingar eller försöker sabotera diskussionen kommer att raderas. Allt annat är tillåtet.
+        recommendation_three: Det här är din plats, du ska kunna trivas och göra din röst hörd här.
   topics:
     show:
-      login_to_comment: Du måste %{signin} eller %{signup} för att kunna lämna en kommentar.
+      login_to_comment: Du behöver %{signin} eller %{signup} för att kunna kommentera.
